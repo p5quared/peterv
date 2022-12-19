@@ -27,6 +27,8 @@
 		"@fontsource/catamaran": "^4.5.9",
 		"@fontsource/comfortaa": "^4.5.10",
 		"@fontsource/comforter": "^4.5.8",
-		"@fontsource/comforter-brush": "^4.5.8"
+		"@fontsource/comforter-brush": "^4.5.8",
+		"@fontsource/nothing-you-could-do": "^4.5.9",
+		"@sveltejs/adapter-vercel": "^1.0.0"
 	}
 }

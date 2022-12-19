@@ -6,6 +6,7 @@
     // script
     import "@fontsource/comforter"
     import "@fontsource/comforter-brush"
+    import "@fontsource/nothing-you-could-do"
 
     import "./reset.css"
 </script>
@@ -15,7 +16,7 @@
 <style>
     :root {
         --font-body: "Catamaran", sans-serif;
-        --font-script: "Comforter Brush", cursive;
+        --font-script: "Nothing You Could Do", cursive;
         --color-body: #4F4F4F;
         --color-secondary: #769676;
 
@@ -28,4 +29,5 @@
         font-family: var(--font-body);
         font-size: 24px;
     }
+
 </style>
