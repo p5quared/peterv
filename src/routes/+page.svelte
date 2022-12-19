@@ -2,7 +2,9 @@
 
 <div id="heroContainer">
     <div>
-        <div id="meSVG">Container for Me as SVG</div>
+        <div id="meSVG">
+            <img src="award.jpeg" alt="me winning award">
+        </div>
         <h1 id="signature">PeterS.V.</h1>
     </div>
     <a id="more" href="/more">More</a>
@@ -23,9 +25,9 @@
         justify-content: space-evenly;
     }
     #meSVG {
-        background-color: var(--color-secondary);
+        /*background-color: var(--color-secondary);*/
         width: 250px;
-        height: 300px;
+        height: 400px;
         margin-bottom: 1em;
 
         text-align: center;
@@ -60,6 +62,9 @@
 
     body {
         background: var(--color-background);
+    }
+    img {
+        height: 100%;
     }
 
     #page-wrapper {
