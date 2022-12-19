@@ -4,6 +4,7 @@
     <div>
         <div id="meSVG">
             <img src="award.jpeg" alt="me winning award">
+            <p>This site is an early work in progress.</p>
         </div>
         <h1 id="signature">PeterS.V.</h1>
     </div>
@@ -28,7 +29,7 @@
         /*background-color: var(--color-secondary);*/
         width: 250px;
         height: 400px;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
 
         text-align: center;
     }
