@@ -23,7 +23,6 @@
         --color-background: #FAEBD7;
         --color-background-2: #4F4F4F;
 
-        background-color: var(--color-background);
         color: var(--color-body);
 
         font-family: var(--font-body);

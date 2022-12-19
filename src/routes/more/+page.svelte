@@ -2,7 +2,7 @@
     <title>More Info</title>
     <meta name="More Info" content="A few of my links." />
 </svelte:head>
-<div id="background">
+<div id="page-frame">
     <div id="content">
         <ul>
             <li class="left_slider">
@@ -53,7 +53,6 @@
 
     #content {
         height: 100%;
-        padding-top: 1em;
 
         display: flex;
         flex-direction: column;
@@ -61,13 +60,12 @@
         align-items: center;
 
     }
-    #background {
+    #page-frame {
         position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: var(--color-background-2);
+        height: 100vh;
+        width: 100vw;
+
+        background-color: var(--color-background-2);
     }
 
     .left_slider {
@@ -81,5 +79,4 @@
     .left_slider:hover {
         background-position: -50% 150%;
     }
-
 </style>

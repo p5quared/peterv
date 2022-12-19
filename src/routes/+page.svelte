@@ -1,3 +1,5 @@
+<div id="page-wrapper">
+
 <div id="heroContainer">
     <div>
         <div id="meSVG">Container for Me as SVG</div>
@@ -6,6 +8,7 @@
     <a id="more" href="/more">More</a>
 </div>
 
+</div>
 
 <style>
     #heroContainer {
@@ -53,5 +56,15 @@
 
     a {
         text-decoration: none;
+    }
+
+    body {
+        background: var(--color-background);
+    }
+
+    #page-wrapper {
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--color-background);
     }
 </style>
