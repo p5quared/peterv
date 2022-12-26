@@ -1,4 +1,4 @@
-<div id="page-wrapper">
+<div class="cards">
     <div class="card" id="card0">
         <a href="/projects/">
             I am a card
@@ -14,8 +14,10 @@
             I am a card
         </a>
     </div>
+</div>
+<div id="page-frame">
     <div id="heroContainer">
-            <div id="meSVG">
+        <div id="meSVG">
                 <img src="award.jpeg" alt="me winning award">
             </div>
             <h1 id="signature">PeterS.V.</h1>
@@ -25,32 +27,10 @@
 
 
 <style>
-    #card0 {
-        z-index: 2;
-        top: 20%;
-        left: 53%;
-        rotate: 30deg;
-    }
-    #card1 {
-        z-index: 2;
-        rotate: -132deg;
-
-        top: 29%;
-        right: 53%;
-    }
-    #card2 {
-        z-index: 2;
-        rotate: -36deg;
-
-        top: 15%;
-        right: 53%;
-
-    }
     #heroContainer {
-        width: fit-content;
+        width: 100%;
         height: 100vh;
-        margin-left: auto;
-        margin-right: auto;
+
 
         display: flex;
         flex-direction: column;
@@ -105,14 +85,24 @@
         z-index: 5;
     }
 
-    #page-wrapper {
+    #page-frame {
+        position: absolute;
         height: 100vh;
         width: 100vw;
         background-color: var(--color-background);
     }
 
+    .cards {
+        z-index: 1;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        overflow: hidden;
+    }
+
     .card {
         position: absolute;
+        z-index: 2;
 
         width: 150px;
         height: 200px;
@@ -138,5 +128,25 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    #card0 {
+        top: 20%;
+        left: 54%;
+        rotate: 30deg;
+
+    }
+    #card1 {
+        rotate: -132deg;
+
+        top: 29%;
+        right: 53%;
+    }
+    #card2 {
+        rotate: -36deg;
+
+        top: 15%;
+        right: 53%;
+
     }
 </style>
