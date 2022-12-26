@@ -18,9 +18,9 @@
         --font-body: "Catamaran", sans-serif;
         --font-script: "Nothing You Could Do", cursive;
         --color-body: #4F4F4F;
-        --color-secondary: #2E933C;
+        --color-secondary: #769676;
 
-        --color-background: #EFD6AC;
+        --color-background: #FAEBD7;
         --color-background-2: #4F4F4F;
 
         color: var(--color-body);
