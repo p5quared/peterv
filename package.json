@@ -36,6 +36,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@portabletext/svelte": "^2.0.0",
 		"@sanity/client": "^6.4.0"
 	}
 }

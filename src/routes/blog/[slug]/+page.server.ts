@@ -10,11 +10,11 @@ const client = createClient({
 });
 
 
-export const load = ( async () => {
-	const posts = await client.fetch(`*[_type =="post"]`);
+export const load = ( async ({params}) => {
+	const post = await client.fetch(`*[slug.current == "${params.slug}"]`);
 
-	if (posts) {
-		return { posts };
+	if (post) {
+		return { post: post[0] };
 	}
 	throw error(500, 'Internal Server Error')
 }) satisfies PageServerLoad

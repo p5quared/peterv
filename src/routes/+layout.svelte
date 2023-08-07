@@ -14,15 +14,15 @@
 
 
 <AppShell
-regionPage="container mx-auto"
-slotHeader="container mx-auto"
+regionPage="container mx-auto max-w-screen-lg px-8"
+slotHeader="container mx-auto max-w-screen-lg"
 >
 	<svelte:fragment slot='header'>
 		<AppBar 
 		background="bg-surface-100-900-token"
 		padding="p-8"
-		gap="gap-12"
-		slotDefault="flex gap-12"
+		gap="gap-6 md:gap-12"
+		slotDefault="flex gap-6 md:gap-12"
 		>
 			<svelte:fragment slot='lead'>
 			<a href='/' class="h1 flex">
@@ -38,5 +38,4 @@ slotHeader="container mx-auto"
 		</AppBar>
 	</svelte:fragment>
 	<slot />
-
 </AppShell>

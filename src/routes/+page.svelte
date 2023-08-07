@@ -3,7 +3,7 @@ import github_mark from '$lib/assets/github-mark/github-mark.svg';
 
 </script>
 
-<div class="grid grid-flow-row md:grid-flow-col gap-24 px-8">
+<div class="grid grid-flow-row md:grid-flow-col gap-24">
 	<div class="flex flex-col gap-6">
 		<h1 class="h1 leading-tight">Hi, I'm<br>Peter Vaiciulis.</h1>
 		<p class="leading-relaxed">I'm from NY, USA and among other things, I enjoy writing code.
