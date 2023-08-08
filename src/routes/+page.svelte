@@ -31,7 +31,7 @@ const { projects } = data;
 		<p>Here are some of the things I've been working on recently:</p>
 		<ul>
 		{#each projects as project}
-			<li class="border-2 p-4 border-primary-900-50-token">
+			<li class="border-2 p-4 my-4 border-primary-900-50-token">
 				<h3 class="h3">{project.title}</h3>
 				<p class="pb-2 text-sm text-gray-200">project date</p>
 				<p class="pb-2">{project.description}</p>
