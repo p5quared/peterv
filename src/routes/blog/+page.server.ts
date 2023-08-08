@@ -11,7 +11,7 @@ const client = createClient({
 
 
 export const load = ( async () => {
-	const posts = await client.fetch(`*[_type =="post"]`);
+	const posts = await client.fetch(`*[_type =="post"] | order(_createdAt desc)`);
 
 	if (posts) {
 		return { posts };

@@ -10,10 +10,18 @@ const { posts } = data
 
 <div>
 {#if posts && posts.length}
-<ul>
+<ul class="space-y-16">
 	{#each posts as post}
 	<li>
-	<a class="anchor h3"
+	<p class="text-secondary-800-100-token">{post._createdAt}</p>
+	<ul>
+		{#each post.tags as tag}
+		<li class="inline-block mr-2 text-tertiary-600-300-token">
+			{tag}
+		</li>
+		{/each}
+	<ul>
+	<a class="anchor h2"
 	href={`${$page.url.pathname}/${post.slug.current}`}>{post.title}</a>
 	</li>
 	{/each}
