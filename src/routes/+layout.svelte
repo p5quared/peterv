@@ -27,7 +27,7 @@ slotHeader="container mx-auto max-w-screen-lg"
 		>
 			<svelte:fragment slot='lead'>
 			<a href='/' class="h1 flex" aria-current={$page.url.pathname === "/"}>
-				PV<div class="rotate-12">!</div>
+				P<div class="rotate-6">!</div>
 			</a>
 			</svelte:fragment>
 			<a href='/work' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/work"}>work</a>
