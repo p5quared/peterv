@@ -10,7 +10,7 @@ console.log("Title: " + post.title)
 </script>
 
 <h1 class="h1">{post.title}</h1>
-<article class="prose">
+<article class="prose mb-24">
 	<PortableText value={post.body} />
 	<p>-Peter V.</p>
 </article>
