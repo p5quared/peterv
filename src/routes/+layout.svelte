@@ -11,8 +11,20 @@
 
 	import { page } from '$app/stores';
 
+	import faviconXL from '$lib/assets/faviconXL.svg';
 </script>
 
+<svelte:head>
+	<meta property="og:site_name" content="petervaiciulis.com" />
+	<meta property="og:title" content="petervaiciulis.com" />
+	<meta property="og:description" content="Web territory of the infamous, Peter V." />
+	<meta property="og:locale" content="en" />
+
+	<meta property="og:image:type" content="image/svg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:image" content={faviconXL} />
+</svelte:head>
 
 <AppShell
 regionPage="container mx-auto max-w-screen-lg px-8"
