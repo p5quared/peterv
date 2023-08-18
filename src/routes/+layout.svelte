@@ -19,7 +19,6 @@
 	<meta property="og:title" content="petervaiciulis.com" />
 	<meta property="og:description" content="Web territory of the infamous, Peter V." />
 	<meta property="og:locale" content="en" />
-
 	
 
 	  <meta property="og:image:type" content="image/png" />

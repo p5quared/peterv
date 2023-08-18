@@ -9,7 +9,6 @@ const client = createClient({
 	useCdn: true,
 });
 
-
 export const load = ( async ({params}) => {
 	const post = await client.fetch(`*[slug.current == "${params.slug}"]`);
 
