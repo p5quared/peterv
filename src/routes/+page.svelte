@@ -28,12 +28,12 @@ const { projects } = data;
 	</div>
 	<div class="flex flex-col gap-6">
 		<h2 class="h2">Work</h2>
-		<p>Here are some of the things I've been working on recently:</p>
+		<p>Here are a couple things I've been working on recently:</p>
 		<ul>
 		{#each projects as project}
 			<li class="border-2 p-4 my-4 border-primary-900-50-token">
 				<h3 class="h3">{project.title}</h3>
-				<p class="pb-2 text-sm text-gray-200">project date</p>
+				<p class="pb-2 text-sm text-gray-300">{project._createdAt}</p>
 				<p class="pb-2">{project.description}</p>
 				<a class="anchor"
 				href={`/work/${project.slug.current}`}>Read more</a>

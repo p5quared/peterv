@@ -11,8 +11,9 @@ const client = createClient({
 
 
 export const load = ( async () => {
-	const projects = await client.fetch(`*[_type =="projects"]`);
-
+	const projects = await client.fetch(`*[_type =="projects"]`)
+									.then(p => p.slice(0,3));
+	
 	if (projects) {
 		return { projects };
 	}
