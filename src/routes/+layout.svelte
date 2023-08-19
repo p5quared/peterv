@@ -28,7 +28,7 @@
 </svelte:head>
 
 <AppShell
-regionPage="container mx-auto max-w-screen-lg px-8"
+regionPage="container mx-auto max-w-screen-lg px-8 pb-12"
 slotHeader="container mx-auto max-w-screen-lg"
 >
 	<svelte:fragment slot='header'>
