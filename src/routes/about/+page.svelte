@@ -12,7 +12,7 @@ import headshot from '$lib/assets/headshot2.jpg';
 
 <div class="container">
 <a href={resume} target="_blank" class="anchor mb-12 text-tertiary-600 italic">Click for resume.</a>
-<article class="prose">
+<article class="prose [&>p]:leading-relaxed">
 	<h1 class="h1">About</h1>
 	<Avatar src={headshot}
 	class="float-left m-4"

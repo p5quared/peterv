@@ -8,7 +8,7 @@ import PortableImage from "$lib/PortableImage.svelte";
 </script>
 
 <h1 class="h1">{post.title}</h1>
-<article class="prose">
+<article class="prose [&>p]:leading-relaxed">
 	<PortableText value={post.body}
 	components={{
 		types: {
