@@ -12,7 +12,7 @@ const client = createClient({
 
 // TODO: select a little better... perhaps pinned content?
 export const load = ( async () => {
-	const projects = await client.fetch(`*[_type =="projects"]`)
+	const projects = await client.fetch(`*[_type =="projects" && pinned == true]`)
 									.then(p => p.slice(0,3));
 	
 	if (projects) {
