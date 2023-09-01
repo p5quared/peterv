@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores';
 import github_mark from '$lib/assets/github-mark/github-mark.svg';
 import type { PageData } from './$types';
 
@@ -12,7 +11,8 @@ const { projects } = data;
 	<div class="flex flex-col gap-6">
 		<h1 class="h1 leading-tight">Hi, I'm<br>Peter Vaiciulis.</h1>
 		<p class="leading-relaxed">I'm from NY, USA and among other things, I enjoy writing code.
-		Mostly I find myself writing code for the web but I am also interested in DevOps and ML.
+		Lately I've found myself writing code for the web;
+		my primary interests lie in distributed systems, developer tooling, and full-stack development.
 		</p>
 		<p class="leading-relaxed">When I'm not writing code you'll probably find me sailing, playing poker or piano, or
 		still trying to finish Crime & Punishment after all these years.</p>
