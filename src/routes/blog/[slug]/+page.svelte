@@ -5,6 +5,9 @@ const { post } = data
 
 import {PortableText} from '@portabletext/svelte'
 import PortableImage from "$lib/PortableImage.svelte";
+
+import PortableAnchor from "$lib/PortableAnchor.svelte";
+console.log(post.body)
 </script>
 
 <h1 class="h1">{post.title}</h1>
@@ -13,7 +16,10 @@ import PortableImage from "$lib/PortableImage.svelte";
 	components={{
 		types: {
 		image: PortableImage,
-		}
+		},
+		marks: {
+		link: PortableAnchor,
+		},
 	}}
 	/>
 	<p>-Peter V.</p>
