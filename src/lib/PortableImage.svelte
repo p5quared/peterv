@@ -2,11 +2,21 @@
 import type { BlockComponentProps } from '@portabletext/svelte'
 export let portableText: BlockComponentProps
 
-let img_src = portableText.value.asset._ref.slice(6)
-img_src = img_src.split('-')
-const img_src_type = img_src.pop()
-img_src = img_src.join('-')
-img_src += "." + img_src_type
+// Sanity portableText blocks are weird
+const getImageSrc = () => {
+	let img_src = portableText.value.asset._ref.slice(6)
+	img_src = img_src.split('-')
+	const img_src_type = img_src.pop()
+	img_src = img_src.join('-')
+	img_src += "." + img_src_type
+	img_src = `https://cdn.sanity.io/images/x4wuwagv/production/${img_src}`
+	return img_src
+}
+
+const imgSrc = getImageSrc()
+
 </script>
 
-<img src={`https://cdn.sanity.io/images/x4wuwagv/production/${img_src}`} alt="">
+<a href={imgSrc} target="_blank">
+	<img src={imgSrc} alt="">
+</a>
