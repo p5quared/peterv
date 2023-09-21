@@ -7,6 +7,14 @@ const { projects } = data;
 
 </script>
 
+<svelte:head>
+	<title>
+		peterv!
+	</title>
+	<meta name="description" content="This is my little slice of the web." />
+	<meta name="theme-color" content="black" />
+</svelte:head>
+
 <div class="grid grid-flow-row md:grid-flow-col gap-24">
 	<div class="flex flex-col gap-6">
 		<h1 class="h1 leading-tight">Hi, I'm<br>Peter Vaiciulis.</h1>
