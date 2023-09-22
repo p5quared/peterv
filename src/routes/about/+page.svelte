@@ -10,10 +10,9 @@ import headshot from '$lib/assets/headshot2.jpg';
 
 
 
-<div class="container">
-<a href={resume} target="_blank" class="anchor mb-12 text-tertiary-600 italic">Click for resume.</a>
-<article class="prose [&>p]:leading-relaxed">
-	<h1 class="h1">About</h1>
+<article class="prose [&>p]:leading-relaxed [&>p]:text-black">
+	<h1 class="prose h1">A Little About Me</h1>
+	<a href={resume} target="_blank" class="anchor text-tertiary-600 italic">(click for resume)</a>
 	<Avatar src={headshot}
 	class="float-left m-4"
 	width="w-32"
@@ -43,8 +42,8 @@ import headshot from '$lib/assets/headshot2.jpg';
 	Over the past few years I have worn many hats. After dropping out of RPI to pursue a startup idea
 	I decided to launch a boat rental business, boatADK. I ran this, renting pontoon boats to people on
 	lake placid for a few years before selling it in 2023.
-	I also had a stint working at one of the most exclusive boutique hotels in the country, The Point,
-	where, as Property Host, I was responsible for the guest experience and trained towards sommoliere-ship.
+	I also had a stint working at one of the most exclusive boutique hotels in the country where, as
+	Property Host, I was responsible for the guest experience and trained towards sommoliere-ship.
 	I've decided I love programming more than wine, so I'm back in school planning to graduate with a degree
 	in computer science and pure math in Spring '25.
 	</p>
@@ -52,7 +51,7 @@ import headshot from '$lib/assets/headshot2.jpg';
 	{#if browser}
 		<p>
 		If you are not a robot and want to get in touch you can reach me here:
-		<a href="mailto:petervaiciulis@gmail.com">petervaiciulis@gmail.com</a>.
+		<a class="hover:text-primary-500 transition transition-color" href="mailto:petervaiciulis@gmail.com">petervaiciulis@gmail.com</a>.
 		</p>
 	{:else}
 		<noscript>
@@ -60,4 +59,3 @@ import headshot from '$lib/assets/headshot2.jpg';
 		</noscript>
 	{/if}
 </article>
-</div>

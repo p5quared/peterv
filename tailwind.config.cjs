@@ -1,13 +1,23 @@
 import { join } from 'path'
 import typography from '@tailwindcss/typography'
-import skeleton from '@skeletonlabs/skeleton/tailwind/skeleton.cjs'
+import { skeleton } from '@skeletonlabs/tw-plugin'
+
+import {myTheme} from './custom-theme.ts'
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default  {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
+	content: ['./src/**/*.{html,js,svelte,ts}',
+		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
 	theme: {
 		extend: {},
 	},
-	plugins: [typography,...skeleton()],
+	plugins: [typography,
+				skeleton({
+					themes: {
+						preset: [ "skeleton", 'crimson', 'modern' ],
+						custom: [myTheme],
+						}
+					})
+			],
 }
