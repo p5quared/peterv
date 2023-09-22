@@ -7,6 +7,7 @@ import {PortableText} from '@portabletext/svelte'
 import PortableImage from "$lib/PortableImage.svelte";
 
 import PortableAnchor from "$lib/PortableAnchor.svelte";
+import PortableBlockQuote from "$lib/PortableBlockQuote.svelte";
 console.log(post.body)
 </script>
 
@@ -19,6 +20,9 @@ console.log(post.body)
 		},
 		marks: {
 		link: PortableAnchor,
+		},
+		block: {
+		blockquote: PortableBlockQuote,
 		},
 	}}
 	/>

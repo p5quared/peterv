@@ -7,6 +7,10 @@ img_src = img_src.split('-')
 const img_src_type = img_src.pop()
 img_src = img_src.join('-')
 img_src += "." + img_src_type
+
+const full_img_src = `https://cdn.sanity.io/images/x4wuwagv/production/${img_src}`
 </script>
 
-<img src={`https://cdn.sanity.io/images/x4wuwagv/production/${img_src}`} alt="">
+<a href={full_img_src} target="_blank">
+	<img src={`https://cdn.sanity.io/images/x4wuwagv/production/${img_src}`} alt="">
+</a>
