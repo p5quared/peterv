@@ -2,7 +2,7 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton'
+	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton'
 
 	import { page } from '$app/stores';
 
@@ -41,6 +41,9 @@ slotHeader="container mx-auto max-w-screen-lg"
 			<a href='/work' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/work"}>work</a>
 			<a href='/blog' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/blog"}>blog</a>
 			<a href='/about' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/about"}>about</a>
+		<svelte:fragment slot='trail'>
+			<LightSwitch />
+		</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
 	<slot />
