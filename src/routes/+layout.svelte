@@ -2,7 +2,7 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 
-	import { AppShell, AppBar, LightSwitch } from '@skeletonlabs/skeleton'
+	import { AppBar, LightSwitch } from '@skeletonlabs/skeleton'
 
 	import { page } from '$app/stores';
 
@@ -22,29 +22,24 @@
 	  <meta property="og:image:height" content="630" />
 </svelte:head>
 
-<AppShell
-regionPage="container mx-auto max-w-screen-lg px-8 pb-12"
-slotHeader="container mx-auto max-w-screen-lg"
->
-	<svelte:fragment slot='header'>
-		<AppBar 
-		background="bg-surface-100-900-token"
-		padding="p-8"
-		gap="gap-6 md:gap-12"
-		slotDefault="flex gap-6 md:gap-12"
-		>
-			<svelte:fragment slot='lead'>
-			<a href='/' class="h1 flex" aria-current={$page.url.pathname === "/"}>
-				P<div class="rotate-6">!</div>
-			</a>
-			</svelte:fragment>
-			<a href='/work' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/work"}>work</a>
-			<a href='/blog' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/blog"}>blog</a>
-			<a href='/about' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/about"}>about</a>
-		<svelte:fragment slot='trail'>
-			<LightSwitch />
+<div class="container mx-auto max-w-screen-lg px-8 pb-12" >
+	<AppBar 
+	background="bg-surface-100-900-token"
+	padding="md:py-8 py-4"
+	gap="gap-6 md:gap-12"
+	slotDefault="flex gap-6 md:gap-12"
+	>
+		<svelte:fragment slot='lead'>
+		<a href='/' class="h1 flex" aria-current={$page.url.pathname === "/"}>
+			P<div class="rotate-6">!</div>
+		</a>
 		</svelte:fragment>
-		</AppBar>
+		<a href='/work' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/work"}>work</a>
+		<a href='/blog' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/blog"}>blog</a>
+		<a href='/about' class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all" aria-current={$page.url.pathname === "/about"}>about</a>
+	<svelte:fragment slot='trail'>
+		<LightSwitch />
 	</svelte:fragment>
+	</AppBar>
 	<slot />
-</AppShell>
+</div>
