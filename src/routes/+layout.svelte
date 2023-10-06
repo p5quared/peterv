@@ -30,7 +30,7 @@
 	slotDefault="flex gap-6 md:gap-12"
 	>
 		<svelte:fragment slot='lead'>
-		<a href='/' class="h1 flex" aria-current={$page.url.pathname === "/"}>
+		<a href='/' class="h1 flex hover:text-primary-500 hover:scale-125 hover:rotate-12 transition-all duration-500" aria-current={$page.url.pathname === "/"}>
 			P<div class="rotate-6">!</div>
 		</a>
 		</svelte:fragment>
