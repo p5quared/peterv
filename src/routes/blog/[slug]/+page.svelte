@@ -6,12 +6,10 @@
 
 	export let data: PageData
 	const { post } = data
-
-// console.log(post.body)
 </script>
 
-<h1 class="h1">{post.title}</h1>
-<article class="prose [&>p]:leading-relaxed [&>*]:text-black">
+<h1 class="h1 pb-2">{post.title}</h1>
+<article class="prose [&>p]:leading-relaxed text-inherit [&>h2]:text-inherit [&>h3]:text-inherit [&>h4]:text-inherit">
 	<PortableRenderer value={post.body} />
 	<p>-Peter V.</p>
 </article>
