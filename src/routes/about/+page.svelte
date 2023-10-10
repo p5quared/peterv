@@ -10,8 +10,8 @@ import headshot from '$lib/assets/headshot2.jpg';
 
 
 
-<article class="prose [&>p]:leading-relaxed [&>p]:text-black">
-	<h1 class="prose h1">A Little About Me</h1>
+<article class="prose [&>p]:leading-relaxed text-inherit">
+	<h1 class="prose h1 text-inherit">A Little About Me</h1>
 	<a href={resume} target="_blank" class="anchor text-tertiary-600 italic">(click for resume)</a>
 	<Avatar src={headshot}
 	class="float-left m-4"
