@@ -22,7 +22,7 @@
 
 
 <svelte:head>
-	<meta name="description" content={desc} />
+	<meta property="description" content={desc} />
 	<meta property="og:description" content={desc} />
 	<meta property="og:title" content={post.title} />
 	<meta property="og:type" content="article" />
