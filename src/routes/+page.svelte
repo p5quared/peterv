@@ -11,6 +11,7 @@ const { projects } = data;
 	<title>
 		peterv!
 	</title>
+	<meta property="og:title" content="petervaiciulis.com" />
 	<meta name="description" content="This is my little slice of the web." />
 	<meta name="theme-color" content="black" />
 </svelte:head>
