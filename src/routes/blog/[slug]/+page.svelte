@@ -1,29 +1,20 @@
 <script lang="ts">
 	import type { PageData } from "./$types";
 	import PortableRenderer from "$lib/PortableRenderer.svelte";
-	import  { descriptionLimiter }  from "$lib/utils";
-
-
 
 	export let data: PageData
 	const { post } = data
 
-	let body_text = ""
-	for (let i = 0; i < post.body.length; i++) {
-		let children = post.body[i].children
-		for (let j = 0; j < children.length; j++) {
-			body_text += children[j].text
-			body_text += " "
-		}
-	}
-
-	const desc = descriptionLimiter(body_text)
+	const ogDescription = post.ogDescription
 </script>
 
 
 <svelte:head>
-	<meta property="description" content={desc} />
-	<meta property="og:description" content={desc} />
+	{#if ogDescription}
+		<meta property="og:description" content={ogDescription} />
+		<meta name="description" content={ogDescription} />
+	{/if}
+	<title>{`peterv! | ${post.title}`}</title>
 	<meta property="og:title" content={post.title} />
 	<meta property="og:type" content="article" />
 </svelte:head>
