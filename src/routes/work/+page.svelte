@@ -7,6 +7,10 @@ import { page } from "$app/stores";
 const { posts } = data
 </script>
 
+<svelte:head>
+	<title>peterv! | Work</title>
+</svelte:head>
+
 
 <div>
 {#if posts && posts.length}
