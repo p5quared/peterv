@@ -18,7 +18,7 @@
 					<a class="anchor h2" href={`${$page.url.pathname}/${post.slug.current}`}>
 						{post.title}
 					</a>
-					<div class="flex gap-8">
+					<div class="lg:flex gap-8">
 					<p class="text-secondary-500-400-token">{post._createdAt}</p>
 					<ul>
 						{#each post.tags as tag}
