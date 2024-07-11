@@ -40,9 +40,15 @@
 		of the NSF in 2023. It has also been presented at the Joint Mathematics Meetings in San Francisco 2024.
 	</p>
 	<p>
-		Right now I am working on a project to make educational resources more accessible and
-		dissemable to the public.
-		When I'm not programming, you'll most likely find me sailing on Lake Champlain or attending
+		This summer I've been interning at Trusted Nurse Staffing doing a mix of data engineering
+		and fullstack web development. In other words, I try to move around big spreadsheets without breaking
+		things and help make the website look pretty.
+	</p>
+	<p>
+		This fall I'll be interning at Amazon in Seattle.
+	</p>
+	<p>
+		When I'm not programming, you'll probably find me sailing on Lake Champlain or attending
 		the Buffalo Philharmonic Orchestra.
 	</p>
 
