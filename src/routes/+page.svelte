@@ -42,7 +42,7 @@ const { projects } = data;
 		<p>Here are a couple things I've been working on recently:</p>
 		<ul>
 		{#each projects as project}
-			<li class="border-2 p-4 my-4 border-primary-900-50-token">
+			<li class="border-2 p-4 mb-6 border-primary-900-50-token shadow-encore">
 				<h3 class="h3">{project.title}</h3>
 				<p class="pb-2 text-sm text-gray-300">{formatDate(project._createdAt)}</p>
 				<p class="pb-2">{project.description}</p>
