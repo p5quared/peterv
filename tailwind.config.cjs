@@ -12,7 +12,7 @@ export default {
 	theme: {
 		extend: {
 			boxShadow: {
-				'encore': '8px 8px 0 0 black'
+				'encore': '5px 5px 0 0 black'
 			}
 		},
 	},
