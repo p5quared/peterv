@@ -2,6 +2,7 @@
 import type { PageData } from "./$types";
 export let data: PageData
 
+	import formatDate from '$lib/utils'
 import { page } from "$app/stores";
 
 const { posts } = data
@@ -17,7 +18,7 @@ const { posts } = data
 <ul class="space-y-16">
 	{#each posts as post}
 	<li>
-	<p class="text-secondary-800-100-token">{post._createdAt}</p>
+	<p class="text-secondary-800-100-token">{formatDate(post._createdAt)}</p>
 	<ul>
 		{#each post.tags as tag}
 		<li class="inline-block mr-2 text-tertiary-600-300-token">

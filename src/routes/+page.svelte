@@ -2,6 +2,8 @@
 import github_mark from '$lib/assets/github-mark/github-mark.svg';
 import type { PageData } from './$types';
 
+import formatDate from '$lib/utils';
+
 export let data: PageData
 const { projects } = data;
 
@@ -42,7 +44,7 @@ const { projects } = data;
 		{#each projects as project}
 			<li class="border-2 p-4 my-4 border-primary-900-50-token">
 				<h3 class="h3">{project.title}</h3>
-				<p class="pb-2 text-sm text-gray-300">{project._createdAt}</p>
+				<p class="pb-2 text-sm text-gray-300">{formatDate(project._createdAt)}</p>
 				<p class="pb-2">{project.description}</p>
 				<a class="anchor"
 				href={`/work/${project.slug.current}`}>Read more</a>

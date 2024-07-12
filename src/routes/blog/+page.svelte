@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	export let data: PageData;
+	import formatDate from '$lib/utils'
 
 	import { page } from '$app/stores';
 	const { posts } = data;
@@ -19,7 +20,7 @@
 						{post.title}
 					</a>
 					<div class="lg:flex gap-8">
-					<p class="text-secondary-500-400-token">{post._createdAt}</p>
+					<p class="text-secondary-500-400-token">{formatDate(post._createdAt)}</p>
 					<ul>
 						{#each post.tags as tag}
 							<li class="inline-block mr-2 text-tertiary-600-300-token">
