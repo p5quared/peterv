@@ -42,5 +42,7 @@
 		<LightSwitch />
 	</svelte:fragment>
 	</AppBar>
-	<slot />
+	<main>
+		<slot />
+	</main>
 </div>
