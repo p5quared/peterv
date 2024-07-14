@@ -5,11 +5,14 @@
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
 
-	import { AppBar, LightSwitch } from '@skeletonlabs/skeleton';
-
 	import { page } from '$app/stores';
 
 	import faviconPNG from '$lib/assets/faviconXL.png';
+
+	const navAnchorStyle = `
+	border-links text-text-primary
+	hover:border-b-4 hover:pb-[0px] transition-all`;
+	// add pb-[4px] to stop them from moving
 </script>
 
 <svelte:head>
@@ -22,41 +25,33 @@
 </svelte:head>
 
 <div class="container mx-auto max-w-screen-lg px-8 pb-12">
-	<AppBar
-		background="bg-surface-100-900-token"
-		padding="md:py-8 py-4"
-		gap="gap-6 md:gap-12"
-		slotDefault="flex gap-6 md:gap-12"
-	>
-		<svelte:fragment slot="lead">
+	<nav class="flex gap-6 md:gap-12 py-4 md:py-8 items-end">
 			<a
 				href="/"
-				class="h1 flex hover:text-primary-500 hover:scale-125 hover:rotate-12 transition-all duration-500"
+				class="text-5xl text-text-primary flex hover:text-links hover:scale-125 hover:rotate-12 transition-all duration-500"
 				aria-current={$page.url.pathname === '/'}
 			>
+			<h1>
 				P
+				</h1>
 				<div class="rotate-6">!</div>
 			</a>
-		</svelte:fragment>
 		<a
 			href="/work"
-			class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all"
+			class={navAnchorStyle}
 			aria-current={$page.url.pathname === '/work'}>work</a
 		>
 		<a
 			href="/blog"
-			class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all"
+			class={navAnchorStyle}
 			aria-current={$page.url.pathname === '/blog'}>blog</a
 		>
 		<a
 			href="/about"
-			class="border-primary-500 hover:border-b-4 hover:pb-[0px] pb-[4px] transition-all"
+			class={navAnchorStyle}
 			aria-current={$page.url.pathname === '/about'}>about</a
 		>
-		<svelte:fragment slot="trail">
-			<LightSwitch />
-		</svelte:fragment>
-	</AppBar>
+	</nav>
 	<main>
 		<slot />
 	</main>

@@ -16,38 +16,40 @@
 </svelte:head>
 
 <div class="grid grid-flow-row md:grid-flow-col gap-24">
-	<div class="flex flex-col gap-6">
-		<h1 class="h1 leading-tight">Hi, I'm<br />Peter Vaiciulis.</h1>
-		<p class="leading-relaxed">
+	<div class="prose prose-gray lg:prose-xl">
+		<h1 class="w-fit !mb-0">Hi, I'm<br />Peter Vaiciulis</h1>
+		<p class="leading-normal">
 			I'm from NY, USA and among other things, I enjoy writing code. Lately I've found myself
 			writing code for the web; my primary interests lie in distributed systems, developer tooling,
 			and full-stack development.
 		</p>
-		<p class="leading-relaxed">
+		<p class="leading-normal">
 			When I'm not writing code you'll probably find me sailing, playing poker or piano, or still
 			trying to finish Crime & Punishment after all these years.
 		</p>
-		<hr class="w-1/6" />
-		<a href="http://github.com/p5quared" target="_blank" class="anchor w-min">
-			<div class="flex gap-2">
-				<img src={github_mark} alt="github-mark" class="w-6" />
+		<a href="http://github.com/p5quared" target="_blank">
+			<div class="flex gap-2 items-center">
+				<img src={github_mark} alt="github-mark" class="w-6 !m-0" />
 				<span>github.com/p5quared</span>
 			</div>
 		</a>
 	</div>
+
 	<div class="flex flex-col gap-6">
-		<h2 class="h2">Work</h2>
-		<p>Here are a couple things I've been working on recently:</p>
+<div class="prose prose-gray lg:prose-xl">
+		<h2 class="!mb-2">Work</h2>
+		<p class="leading-normal">Here are a couple things I've been working on recently:</p>
+</div>
 		<ul>
 			{#await projects}
 				<p>Loading projects...</p>
 			{:then projects}
 				{#each projects as project}
-					<li class="border-2 p-4 mb-6 border-primary-900-50-token shadow-encore">
+					<li class="border-2 p-4 mb-6 border-black shadow-encore">
 						<h3 class="h3">{project.title}</h3>
 						<p class="pb-2 text-sm text-gray-300">{formatDate(project._createdAt)}</p>
 						<p class="pb-2">{project.description}</p>
-						<a class="anchor" href={`/work/${project.slug.current}`}>Read more</a>
+						<a href={`/work/${project.slug.current}`}>Read more</a>
 					</li>
 					<li />
 				{/each}
