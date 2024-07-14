@@ -18,5 +18,5 @@ const imgSrc = getImageSrc()
 </script>
 
 <a href={imgSrc} target="_blank">
-	<img src={imgSrc} alt="">
+	<img src={imgSrc} alt="TBD">
 </a>

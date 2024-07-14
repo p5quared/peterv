@@ -1,3 +1,3 @@
-<blockquote class="blockquote m-3 py-4 bg-secondary-50-900-token">
+<blockquote class="p-4 bg-slate-100">
 	<slot />
 </blockquote>

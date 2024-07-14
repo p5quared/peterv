@@ -1,7 +1,16 @@
-<script lang="ts">
-import type { MarkComponentProps } from "@portabletext/svelte";
-export let portableText: MarkComponentProps;
+<script>
+// TODO: Types?
+export let portableText
 
 </script>
 
-<a class="anchor" href={portableText.value.href}><slot /> </a>
+{#if portableText?.value?.href}
+<a href={portableText.value.href}>
+	<slot />
+</a>
+{:else}
+<span class="text-red">
+		ERROR: No href found in PortableAnchor
+</span>
+{/if}
+
