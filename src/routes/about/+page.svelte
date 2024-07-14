@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { Avatar } from '@skeletonlabs/skeleton';
-
 	import { browser } from '$app/environment';
 
 	import resume from '$lib/assets/resume.pdf';
@@ -11,10 +9,11 @@
 	<title>peterv! | About</title>
 </svelte:head>
 
-<article class="prose [&>p]:leading-relaxed text-inherit">
-	<h1 class="prose h1 text-inherit">A Little About Me</h1>
-	<a href={resume} target="_blank" class="anchor text-tertiary-600 italic">(click for resume)</a>
-	<Avatar src={headshot} class="float-left m-4" width="w-32" rounded="rounded-full" />
+<h1 class="text-inherit">A Little About Me</h1>
+<a href={resume} target="_blank" class="italic">(click for resume)</a>
+<article>
+	<h1 class="hidden">A Little About Me</h1>
+	<img src={headshot} alt="selfie of me" class="float-left m-4 w-64 rounded-full" />
 	<p>
 		I am, in the most succinct form possible, a J/24 sailor, a loose poker player, a
 		closeted music major, a wannabe math major, and a programmer.
