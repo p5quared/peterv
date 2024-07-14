@@ -9,7 +9,7 @@
 
 	import faviconPNG from '$lib/assets/faviconXL.png';
 
-	const navAnchorStyle = `
+	const navAnchorStyle = `text-xl
 	border-links text-text-primary
 	hover:border-b-4 hover:pb-[0px] transition-all`;
 	// add pb-[4px] to stop them from moving
@@ -28,13 +28,13 @@
 	<nav class="flex gap-6 md:gap-12 py-4 md:py-8 items-end">
 			<a
 				href="/"
-				class="text-5xl text-text-primary flex hover:text-links hover:scale-125 hover:rotate-12 transition-all duration-500"
+				class="text-5xl text-text-primary flex hover:text-links hover:scale-150 hover:rotate-12 transition-all duration-700"
 				aria-current={$page.url.pathname === '/'}
 			>
 			<h1>
 				P
 				</h1>
-				<div class="rotate-6">!</div>
+				<span class="rotate-6">!</span>
 			</a>
 		<a
 			href="/work"
@@ -56,3 +56,9 @@
 		<slot />
 	</main>
 </div>
+
+<style>
+a {
+	@apply no-underline;
+}
+</style>
