@@ -9,7 +9,6 @@ export default {
 		extend: {
 			boxShadow: {
 				'encore': '5px 5px 1px #011627',
-				'encore-sm': '3px 3px #011627'
 			},
 			fontFamily: {
 				'sans': ['roboto', ...defaultTheme.fontFamily.sans],
