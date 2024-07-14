@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+/*place global styles here */
+html,
+body {
+	@apply h-full;
+	@apply bg-background;
+	@apply text-text-primary;
+	@apply font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@apply font-serif;
+}
+
+h1 {
+  @apply text-3xl; /* Default */
+  @apply md:text-4xl; /* Medium devices and up */
+  @apply lg:text-5xl; /* Large devices and up */
+}
+
+h2 {
+  @apply text-2xl; /* Default */
+  @apply md:text-3xl; /* Medium devices and up */
+  @apply lg:text-4xl; /* Large devices and up */
+}
+
+h3 {
+  @apply text-xl; /* Default */
+  @apply md:text-2xl; /* Medium devices and up */
+  @apply lg:text-3xl; /* Large devices and up */
+}
+
+a {
+	@apply text-links;
+}
