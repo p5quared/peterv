@@ -1,13 +1,12 @@
 <script lang="ts">
-	import type { PageData } from "./$types";
-	import PortableRenderer from "$lib/PortableRenderer.svelte";
+	import type { PageData } from './$types';
+	import PortableRenderer from '$lib/PortableRenderer.svelte';
 
-	export let data: PageData
-	const { post } = data
+	export let data: PageData;
+	const { post } = data;
 
-	const ogDescription = post.ogDescription
+	const ogDescription = post.ogDescription;
 </script>
-
 
 <svelte:head>
 	{#if ogDescription}
@@ -19,10 +18,9 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-
-<h1 class="h1 pb-2">{post.title}</h1>
-<article class="prose lg:prose-lg [&>p]:leading-relaxed text-inherit [&>h2]:text-inherit [&>h3]:text-inherit [&>h4]:text-inherit
-	lg:p-8 lg:mt-4 lg:shadow-encore lg:border-2 lg:border-primary-900-50-token">
+<h1>{post.title}</h1>
+<article>
+	<h1 class="hidden">{post.title}</h1>
 	<PortableRenderer value={post.body} />
 	<p>-Peter V.</p>
 </article>
