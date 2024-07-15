@@ -40,16 +40,19 @@
 		<h2 class="!mb-2">Work</h2>
 		<p class="leading-normal">Here are a couple things I've been working on recently:</p>
 </div>
-		<ul>
+		<ul class="space-y-6">
 			{#await projects}
 				<p>Loading projects...</p>
 			{:then projects}
 				{#each projects as project}
-					<li class="border-2 p-4 mb-6 border-black shadow-encore">
-						<h3 class="h3">{project.title}</h3>
-						<p class="pb-2 text-sm text-gray-300">{formatDate(project._createdAt)}</p>
-						<p class="pb-2">{project.description}</p>
-						<a href={`/work/${project.slug.current}`}>Read more</a>
+					<li class="border-2 p-4 border-black shadow-encore">
+				<div class="flex justify-between items-center">
+						<h3>{project.title}</h3>
+						<p class="pb-2 text-sm">{formatDate(project._createdAt)}</p>
+				</div>
+						<p class="prose prose-gray lg:prose-xl !leading-snug">{project.description}
+						</p>
+						<a class="text-lg" href={`/work/${project.slug.current}`}>Read more</a>
 					</li>
 					<li />
 				{/each}

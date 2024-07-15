@@ -21,7 +21,7 @@ export default {
 				'background': '#FDFDF9',
 				'text-primary': '#011627',
 				'links': '#3E885B',
-				'tag': '#FF9F1C'
+				'tag': '#FF9F1C',
 			},
 			typography: {
 				DEFAULT: {
