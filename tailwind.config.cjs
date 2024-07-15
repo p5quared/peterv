@@ -1,5 +1,5 @@
-import typography from '@tailwindcss/typography'
-const defaultTheme = require('tailwindcss/defaultTheme')
+import typography from '@tailwindcss/typography';
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -8,20 +8,27 @@ export default {
 	theme: {
 		extend: {
 			boxShadow: {
-				'encore': '5px 5px 1px #011627',
+				encore: '5px 5px 1px #011627'
 			},
 			fontFamily: {
-				'sans': ['roboto', ...defaultTheme.fontFamily.sans],
-				'serif': ['ui-serif', 'Georgia', 'Cambria', "Times New Roman", 'Times', ...defaultTheme.fontFamily.serif],
+				sans: ['roboto', ...defaultTheme.fontFamily.sans],
+				serif: [
+					'ui-serif',
+					'Georgia',
+					'Cambria',
+					'Times New Roman',
+					'Times',
+					...defaultTheme.fontFamily.serif
+				]
 			},
 			fontSize: {
 				base: ''
 			},
 			colors: {
-				'background': '#FDFDF9',
+				background: '#FDFDF9',
 				'text-primary': '#011627',
-				'links': '#3E885B',
-				'tag': '#FF9F1C',
+				links: '#3E885B',
+				tag: '#FF9F1C'
 			},
 			typography: {
 				DEFAULT: {
@@ -30,15 +37,15 @@ export default {
 						a: {
 							color: '#3E885B',
 							'&:hover': {
-								filter: 'brightness(1.5)',
-							},
+								filter: 'brightness(1.5)'
+							}
 						},
 						'blockquote p:first-of-type::before': false,
-						'blockquote p:last-of-type::after': false,
-					},
+						'blockquote p:last-of-type::after': false
+					}
 				}
 			}
-		},
+		}
 	},
-	plugins: [typography],
-}
+	plugins: [typography]
+};
