@@ -3,7 +3,6 @@
 	export let data: PageData;
 	import formatDate from '$lib/utils';
 
-	import { page } from '$app/stores';
 	const { posts } = data;
 </script>
 
@@ -20,7 +19,7 @@
 				"
 				>
 					<div class="lg:flex justify-between">
-						<a class="anchor h2" href={`${$page.url.pathname}/${post.slug.current}`}>
+						<a class="anchor h2" href={`/blog/${post.slug.current}`}>
 							{post.title}
 						</a>
 						<p class="min-w-fit pl-16 text-secondary-500-400-token">
