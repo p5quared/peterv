@@ -9,6 +9,7 @@
 <svelte:head>
 	<title>peterv! | Blog</title>
 </svelte:head>
+
 {#await posts then posts}
 	{#if posts && posts.length}
 		<ul class="space-y-16">

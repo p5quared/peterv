@@ -15,17 +15,16 @@
 	<h1 class="hidden">A Little About Me</h1>
 	<img src={headshot} alt="selfie of me" class="float-left m-4 w-64 rounded-full" />
 	<p>
-		I am, in the most succinct form possible, a J/24 sailor, a loose poker player, a
-		closeted music major, a wannabe math major, and a programmer.
+		I am, in the most succinct form possible, a J/24 sailor, a loose poker player, a closeted music
+		major, a wannabe math major, and a programmer.
 	</p>
 	<p>
 		Over the past few years I have worn many hats. After dropping out of RPI to pursue a startup
-		idea I launched a boat rental business which I ran to a surprising amount of success. 
-		I have also had the opportunity to serve as the Property Host at one of the most exclusive
-		boutique hotels in the country. Here I was responsible for personalizing the guest experience
-		and would host the dinners and cocktail hours. Here I learned a lot about etiquette and
-		high-society while rubbing shoulders with some of the world's elite, and was even trained
-		towards sommoliere-ship.
+		idea I launched a boat rental business which I ran to a surprising amount of success. I have
+		also had the opportunity to serve as the Property Host at one of the most exclusive boutique
+		hotels in the country. Here I was responsible for personalizing the guest experience and would
+		host the dinners and cocktail hours. Here I learned a lot about etiquette and high-society while
+		rubbing shoulders with some of the world's elite, and was even trained towards sommoliere-ship.
 	</p>
 	<p>
 		I've since decided I like programming more than wine, so I'm back in school and planning to
@@ -35,20 +34,19 @@
 		I've contributed to a number of open source projects used by thousands, and since returning to
 		school I've been lucky to join a couple research projects in the fields of web-accessibility and
 		applying machine learning to solve combinatorial (mathematical counting) problems. My research
-		was chosen as 1 of 12 in the nation to presented in Washington DC to legislators the heads
-		of the NSF in 2023. It has also been presented at the Joint Mathematics Meetings in San Francisco 2024.
+		was chosen as 1 of 12 in the nation to presented in Washington DC to legislators the heads of
+		the NSF in 2023. It has also been presented at the Joint Mathematics Meetings in San Francisco
+		2024.
 	</p>
 	<p>
-		This summer I've been interning at Trusted Nurse Staffing doing a mix of data engineering
-		and fullstack web development. In other words, I try to move around big spreadsheets without breaking
-		things and help make the website look pretty.
+		This summer I've been interning at Trusted Nurse Staffing doing a mix of data engineering and
+		fullstack web development. In other words, I try to move around big spreadsheets without
+		breaking things and help make the website look pretty.
 	</p>
+	<p>This fall I'll be interning at Amazon in Seattle.</p>
 	<p>
-		This fall I'll be interning at Amazon in Seattle.
-	</p>
-	<p>
-		When I'm not programming, you'll probably find me sailing on Lake Champlain or attending
-		the Buffalo Philharmonic Orchestra.
+		When I'm not programming, you'll probably find me sailing on Lake Champlain or attending the
+		Buffalo Philharmonic Orchestra.
 	</p>
 
 	{#if browser}

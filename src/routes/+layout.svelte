@@ -26,31 +26,17 @@
 
 <div class="container mx-auto max-w-screen-lg px-8 pb-12">
 	<nav class="flex gap-6 md:gap-12 py-4 md:py-8 items-end">
-			<a
-				href="/"
-				class="text-5xl text-text-primary flex hover:text-links hover:scale-150 hover:rotate-12 transition-all duration-700"
-				aria-current={$page.url.pathname === '/'}
-			>
-			<h1>
-				P
-				</h1>
-				<span class="rotate-6">!</span>
-			</a>
 		<a
-			href="/work"
-			class={navAnchorStyle}
-			aria-current={$page.url.pathname === '/work'}>work</a
+			href="/"
+			class="text-5xl text-text-primary flex hover:text-links hover:scale-150 hover:rotate-12 transition-all duration-700"
+			aria-current={$page.url.pathname === '/'}
 		>
-		<a
-			href="/blog"
-			class={navAnchorStyle}
-			aria-current={$page.url.pathname === '/blog'}>blog</a
-		>
-		<a
-			href="/about"
-			class={navAnchorStyle}
-			aria-current={$page.url.pathname === '/about'}>about</a
-		>
+			<h1>P</h1>
+			<span class="rotate-6">!</span>
+		</a>
+		<a href="/work" class={navAnchorStyle} aria-current={$page.url.pathname === '/work'}>work</a>
+		<a href="/blog" class={navAnchorStyle} aria-current={$page.url.pathname === '/blog'}>blog</a>
+		<a href="/about" class={navAnchorStyle} aria-current={$page.url.pathname === '/about'}>about</a>
 	</nav>
 	<main>
 		<slot />
@@ -58,7 +44,7 @@
 </div>
 
 <style>
-a {
-	@apply no-underline;
-}
+	a {
+		@apply no-underline;
+	}
 </style>
