@@ -33,7 +33,7 @@
 						{/each}
 					</ul>
 					{#if post.ogDescription}
-						<p class="prose prose-gray lg:prose-xl">{post.ogDescription}</p>
+						<p class="prose prose-gray lg:prose-xl !leading-snug">{post.ogDescription}</p>
 					{/if}
 				</li>
 			{/each}
