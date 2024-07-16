@@ -28,11 +28,12 @@
 	<nav class="flex gap-6 md:gap-12 py-4 md:py-8 items-end">
 		<a
 			href="/"
-			class="text-5xl text-text-primary flex hover:text-links hover:scale-150 hover:rotate-12 transition-all duration-700"
+			class="text-text-primary flex 
+			hover:text-links hover:scale-150 hover:rotate-12 transition-all duration-700"
 			aria-current={$page.url.pathname === '/'}
 		>
 			<h1>P</h1>
-			<span class="rotate-6">!</span>
+			<span class="rotate-6 text-3xl md:text-4xl lg:text-5xl">!</span>
 		</a>
 		<a href="/blog" class={navAnchorStyle} aria-current={$page.url.pathname === '/blog'}>posts</a>
 		<a href="/about" class={navAnchorStyle} aria-current={$page.url.pathname === '/about'}>about</a>
