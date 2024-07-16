@@ -15,15 +15,15 @@
 		<ul class="space-y-16">
 			{#each posts as post}
 				<li>
-					<div class="lg:flex justify-between">
+					<div class="sm:flex justify-between">
+						<p class="order-2">
+							{formatDate(post._createdAt)}
+						</p>
 						<a href={`/blog/${post.slug.current}`}>
 							<h2>
 								{post.title}
 							</h2>
 						</a>
-						<p class="pl-16">
-							{formatDate(post._createdAt)}
-						</p>
 					</div>
 					<ul>
 						{#each post.tags as tag}
