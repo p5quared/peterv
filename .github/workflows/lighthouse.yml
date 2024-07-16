@@ -7,16 +7,20 @@ jobs:
     name: Lighthouse
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
         with:
-          node-version: 16.x
-      - name: npm install, build
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+          cache: 'pnpm'
+      - name: install, build
         run: |
-          npm install
-          npm run build
+          pnpm i
+          pnpm build
       - name: run Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.14.x
+          pnpm install -g @lhci/cli@0.14.x
           lhci autorun
