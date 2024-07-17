@@ -17,7 +17,7 @@
 
 <div class="grid grid-flow-row md:grid-flow-col gap-24">
 	<div class="prose prose-gray lg:prose-xl">
-		<h1 class="w-fit !mb-0">Hi, I'm<br />Peter Vaiciulis</h1>
+		<h1 class="!mb-0">Hi, I'm<br /><span class="min-w-fit">Peter Vaiciulis</h1>
 		<p class="leading-normal">
 			I'm from NY, USA and among other things, I enjoy writing code. Lately I've found myself
 			writing code for the web; my primary interests lie in distributed systems, developer tooling,
@@ -46,9 +46,9 @@
 			{:then projects}
 				{#each projects as project}
 					<li class="border-2 p-4 border-black shadow-encore">
-						<div class="flex justify-between items-center">
+						<div class="flex justify-between items-start">
 							<h3>{project.title}</h3>
-							<p class="pb-2 text-sm">{formatDate(project._createdAt)}</p>
+							<p class="pb-2 min-w-fit text-sm">{formatDate(project._createdAt)}</p>
 						</div>
 						<p class="prose prose-gray lg:prose-xl !leading-snug">{project.description}</p>
 						<a class="text-lg" href={`/work/${project.slug.current}`}>Read more</a>
