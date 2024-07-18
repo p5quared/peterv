@@ -24,7 +24,7 @@
 	<meta property="og:image:height" content="630" />
 </svelte:head>
 
-<div class="container mx-auto px-8 pb-12">
+<div class="container max-w-screen-lg mx-auto px-8 pb-12">
 	<nav class="flex gap-6 md:gap-12 py-4 md:py-8 items-end">
 		<a
 			href="/"
