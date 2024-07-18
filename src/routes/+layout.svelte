@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-	<meta property="og:site_name" content="petervaiciulis.com" />
+	<meta property="og:site_name" content="peterv.net" />
 	<meta property="og:locale" content="en" />
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image" content={faviconPNG} />
