@@ -43,7 +43,7 @@
 		fullstack web development. In other words, I try to move around big spreadsheets without
 		breaking things and help make the website look pretty.
 	</p>
-	<p>This fall I'll be interning at Amazon in Seattle.</p>
+	<p>This fall I'll be interning at Amazon in Seattle, working on <a href="https://aws.amazon.com/amplify/">AWS Amplify</a>.</p>
 	<p>
 		When I'm not programming, you'll probably find me sailing on Lake Champlain or attending the
 		Buffalo Philharmonic Orchestra.
