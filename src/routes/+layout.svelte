@@ -35,6 +35,7 @@
 			<h1>P</h1>
 			<span class="rotate-6 text-3xl md:text-4xl lg:text-5xl">!</span>
 		</a>
+		<a href="/reading" class={navAnchorStyle} aria-current={$page.url.pathname === '/reading'}>reading</a>
 		<a href="/blog" class={navAnchorStyle} aria-current={$page.url.pathname === '/blog'}>posts</a>
 		<a href="/about" class={navAnchorStyle} aria-current={$page.url.pathname === '/about'}>about</a>
 	</nav>
