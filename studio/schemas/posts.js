@@ -28,7 +28,30 @@ export default {
 			title: 'Body',
 			name: 'body',
 			type: 'array',
-			of: [{ type: 'block' }, { type: 'image' }],
+			of: [
+				{ type: 'block' },
+				{ type: 'image' },
+				{
+					name: 'audioPlayer',
+					type: 'file',
+					title: 'Audio Player',
+					options: {
+						accept: 'audio/*',
+					},
+					fields: [
+						{
+							title: 'Title',
+							name: 'title',
+							type: 'string',
+						},
+						{
+							title: 'Artist',
+							name: 'artist',
+							type: 'string',
+						}
+					],
+				},
+			],
 		},
 		{
 			title: 'Slug',
