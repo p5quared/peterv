@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { BlockComponentProps } from '@portabletext/svelte';
-	export let portableText: BlockComponentProps;
+	import type { CustomBlockComponentProps } from '@portabletext/svelte';
+	export let portableText: CustomBlockComponentProps;
 
 	// Sanity portableText blocks are weird
 	const getImageSrc = () => {
