@@ -1,0 +1,9 @@
+{
+  "name": "peterv.net",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel run dev",
+    "build": "pnpm --recursive run build",
+    "preview": "pnpm --parallel run preview"
+  }
+}

@@ -1,7 +1,6 @@
 {
   "name": "dimgrey-narwhal",
-  "private": true,
-  "version": "1.0.0",
+  "private": false,
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {

@@ -1,6 +1,5 @@
 {
-	"name": "peterv2",
-	"version": "0.0.1",
+	"name": "app.peterv.net",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
