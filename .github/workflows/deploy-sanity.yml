@@ -1,0 +1,40 @@
+name: Deploy Sanity Studio
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'studio/**'  # Only trigger on changes to studio files
+  workflow_dispatch:  # Allow manual triggering
+
+env:
+  SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./studio  # Set default working directory to studio folder
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Sanity Studio
+        run: pnpm build
+
+      - name: Deploy Sanity Studio
+        run: pnpm run deploy
