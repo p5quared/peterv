@@ -2,6 +2,19 @@ export default {
 	title: 'Post',
 	name: 'post',
 	type: 'document',
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'slug',
+    },
+	prepare(selection) {
+      const {title, subtitle} = selection
+      return {
+        title: title,
+        subtitle: subtitle ? '/' + subtitle.current : 'No slug'
+      }
+    }
+  },
 	fields: [
 		{
 			title: 'Title',
@@ -73,5 +86,4 @@ export default {
 		}
 
 	]
-
 }
