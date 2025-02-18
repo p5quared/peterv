@@ -9,7 +9,6 @@
 	import PortableAppleMusic from './PortableAppleMusic.svelte';
 
 	export let value: InputValue;
-	console.log(value)
 </script>
 
 <PortableText
