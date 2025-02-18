@@ -6,7 +6,7 @@
 	import PortableImage from './PortableImage.svelte';
 	import PortableAnchor from './PortableAnchor.svelte';
 	import PortableBlockQuote from './PortableBlockQuote.svelte';
-	import PortableAudioPlayer from './PortableAudioPlayer.svelte';
+	import PortableAppleMusic from './PortableAppleMusic.svelte';
 
 	export let value: InputValue;
 	console.log(value)
@@ -17,7 +17,7 @@
 	components={{
 		types: {
 			image: PortableImage,
-			audioPlayer: PortableAudioPlayer
+			appleMusicEmbed: PortableAppleMusic,
 		},
 		marks: {
 			link: PortableAnchor
