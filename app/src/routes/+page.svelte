@@ -53,7 +53,6 @@
 						<p class="prose prose-gray lg:prose-xl !leading-snug">{project.description}</p>
 						<a class="text-lg" href={`/work/${project.slug.current}`}>Read more</a>
 					</li>
-					<li />
 				{/each}
 			{:catch error}
 				<p class="text-error-500">Error fetching data!!</p>
