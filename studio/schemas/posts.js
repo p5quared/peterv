@@ -44,26 +44,30 @@ export default {
 			of: [
 				{ type: 'block' },
 				{ type: 'image' },
-				{
-					name: 'audioPlayer',
-					type: 'file',
-					title: 'Audio Player',
-					options: {
-						accept: 'audio/*',
-					},
-					fields: [
-						{
-							title: 'Title',
-							name: 'title',
-							type: 'string',
-						},
-						{
-							title: 'Artist',
-							name: 'artist',
-							type: 'string',
-						}
-					],
-				},
+		{
+                    title: 'Apple Music Embed',
+                    name: 'appleMusicEmbed',
+                    type: 'object',
+                    fields: [
+                        {
+                            title: 'Embed URL',
+                            name: 'src',
+                            type: 'url',
+                            validation: Rule => Rule.required()
+                        }
+                    ],
+                    preview: {
+                        select: {
+                            src: 'src'
+                        },
+                        prepare(selection) {
+                            return {
+                                title: 'Apple Music Embed',
+                                src: selection.src
+                            }
+                        }
+                    }
+                }
 			],
 		},
 		{
