@@ -39,11 +39,18 @@
 		2024.
 	</p>
 	<p>
-		This summer I've been interning at Trusted Nurse Staffing doing a mix of data engineering and
-		fullstack web development. In other words, I try to move around big spreadsheets without
-		breaking things and help make the website look pretty.
+		In summer '24, I interned  at Trusted Nurse Staffing doing a mix of data engineering and
+		fullstack web development. In other words, I tried to move around big spreadsheets without
+		breaking things and helped make the website look pretty.
 	</p>
-	<p>This fall I'll be interning at Amazon in Seattle, working on <a href="https://aws.amazon.com/amplify/">AWS Amplify</a>.</p>
+	<p>
+	In fall '24' I interned at Amazon in Seattle, working on <a href="https://aws.amazon.com/amplify/">AWS Amplify</a>.
+	I worked on the Amplify Data team, designing and implementing support for auto-increment SQL fields. 
+	I wish there were a simpler analogy I could think of...
+  </p>
+  <p>
+	This summer (2025) I will be returning to Amazon as a full-time Software Development Engineer (SDE).
+  </p>
 	<p>
 		When I'm not programming, you'll probably find me sailing on Lake Champlain or attending the
 		Buffalo Philharmonic Orchestra.
