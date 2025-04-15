@@ -4227,8 +4227,8 @@ packages:
   validate-npm-package-name@3.0.0:
     resolution: {integrity: sha512-M6w37eVCMMouJ9V/sdPGnC5H4uDr73/+xdq0FBLO3TFFX1+7wiUY6Es328NN+y43tmY+doUdN9g9J21vqB7iLw==}
 
-  vite@4.5.12:
-    resolution: {integrity: sha512-qrMwavANtSz91nDy3zEiUHMtL09x0mniQsSMvDkNxuCBM1W5vriJ22hEmwTth6DhLSWsZnHBT0yHFAQXt6efGA==}
+  vite@4.5.13:
+    resolution: {integrity: sha512-Hgp8IF/yZDzKsN1hQWOuQZbrKiaFsbQud+07jJ8h9m9PaHWkpvZ5u55Xw5yYjWRXwRQ4jwFlJvY7T7FUJG9MCA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -6288,14 +6288,14 @@ snapshots:
       - '@codemirror/lint'
       - '@codemirror/search'
 
-  '@vitejs/plugin-react@4.3.3(vite@4.5.12(@types/node@22.9.3))':
+  '@vitejs/plugin-react@4.3.3(vite@4.5.13(@types/node@22.9.3))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.0)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.0)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 4.5.12(@types/node@22.9.3)
+      vite: 4.5.13(@types/node@22.9.3)
     transitivePeerDependencies:
       - supports-color
 
@@ -8719,7 +8719,7 @@ snapshots:
       '@types/speakingurl': 13.0.6
       '@types/tar-stream': 3.1.3
       '@types/use-sync-external-store': 0.0.6
-      '@vitejs/plugin-react': 4.3.3(vite@4.5.12(@types/node@22.9.3))
+      '@vitejs/plugin-react': 4.3.3(vite@4.5.13(@types/node@22.9.3))
       archiver: 7.0.1
       arrify: 1.0.1
       async-mutex: 0.4.1
@@ -8795,7 +8795,7 @@ snapshots:
       use-device-pixel-ratio: 1.1.2(react@18.3.1)
       use-hot-module-reload: 2.0.0(react@18.3.1)
       use-sync-external-store: 1.2.2(react@18.3.1)
-      vite: 4.5.12(@types/node@22.9.3)
+      vite: 4.5.13(@types/node@22.9.3)
       yargs: 17.7.2
     transitivePeerDependencies:
       - '@types/node'
@@ -9349,7 +9349,7 @@ snapshots:
     dependencies:
       builtins: 1.0.3
 
-  vite@4.5.12(@types/node@22.9.3):
+  vite@4.5.13(@types/node@22.9.3):
     dependencies:
       esbuild: 0.18.20
       postcss: 8.4.49
