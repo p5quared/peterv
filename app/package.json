@@ -1,5 +1,5 @@
 {
-	"name": "app.peterv.net",
+	"name": "peterv.net",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
