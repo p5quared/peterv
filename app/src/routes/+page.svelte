@@ -17,7 +17,7 @@
 
 <div class="grid grid-flow-row md:grid-flow-col gap-24">
 	<div class="prose prose-gray lg:prose-xl">
-		<h1 class="!mb-0">Hi, I'm<br /><span class="min-w-fit">Peter Vaiciulis</h1>
+		<h1 class="!mb-0">Hi, I'm<br /><span class="min-w-fit">Peter Vaiciulis</span></h1>
 		<p class="leading-normal">
 			I'm from NY, USA and among other things, I enjoy writing code. Lately I've found myself
 			writing code for the web; my primary interests lie in distributed systems, developer tooling,

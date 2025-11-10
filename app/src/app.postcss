@@ -1,7 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+	--color-background: #FDFDF9;
+	--color-text-primary: #011627;
+	--color-links: #3E885B;
+	--color-tag: #FF9F1C;
+
+	--font-sans: roboto, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+	--shadow-encore: 5px 5px 1px #011627;
+}
 
 /*place global styles here */
 html,
