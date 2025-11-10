@@ -45,7 +45,12 @@
 </div>
 
 <style>
-	a {
+	nav a {
 		@apply no-underline;
+		color: var(--color-text-primary) !important;
+	}
+
+	nav a:hover {
+		filter: none !important;
 	}
 </style>
