@@ -5,7 +5,7 @@ description: "Reflections on leadership in community college."
 tags: ["personal", "narrative", "bmcc", "satire"]
 ---
 
-> This is a story that I started writing when I started writing [*Programming: 2023 in Review*](/blog/programming-2023-in-review)*'s* section on BMCC. It quickly started growing out of proportion so I decided to give it its own piece here.
+> This is a story that I started writing when I started writing [*Programming: 2023 in Review*](/posts/programming-2023-in-review)*'s* section on BMCC. It quickly started growing out of proportion so I decided to give it its own piece here.
 
 I had wanted to join a community of people who were like me, newly passionate about CS and full of ambition. I'll admit that at BMCC I found it a little more difficult to locate this cadre than I expected. What I found instead was that community college was (largely) a group of people who have been beaten down spiritually and academically their whole lives (no, I am not going to unpack that massive anecdote here). People who had always been told *you're not able*, *don't bother, *or *just do something simple*.* * Therefore, I took it upon myself to tell them *you can, you should, and you must.*
 

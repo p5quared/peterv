@@ -16,7 +16,7 @@ hugo --minify
 
 ## Content
 
-- **Blog posts**: `content/blog/`
+- **Posts**: `content/posts/`
 - **Projects**: `content/work/`
 - **Reading list**: `data/reading.yaml`
 - **About page**: `content/about.md`
@@ -24,8 +24,8 @@ hugo --minify
 ## Creating new content
 
 ```bash
-# New blog post
-hugo new blog/my-new-post.md
+# New post
+hugo new posts/my-new-post.md
 
 # New project
 hugo new work/my-new-project.md

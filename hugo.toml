@@ -15,7 +15,7 @@ title = "peterv!"
     weight = 1
   [[menu.main]]
     name = "posts"
-    url = "/blog/"
+    url = "/posts/"
     weight = 2
   [[menu.main]]
     name = "about"

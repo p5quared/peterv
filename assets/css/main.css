@@ -357,20 +357,20 @@ main {
   margin-bottom: 1rem;
 }
 
-/* Blog */
-.blog-list {
+/* Posts */
+.posts-list {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 4rem;
 }
 
-.blog-item-date {
+.posts-item-date {
   color: #666;
   font-size: 0.9rem;
 }
 
-.blog-item-title {
+.posts-item-title {
   font-size: 1.5rem;
 }
 

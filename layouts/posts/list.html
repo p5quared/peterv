@@ -1,11 +1,11 @@
 {{ define "main" }}
 {{ if .Pages }}
-<ul class="blog-list">
+<ul class="posts-list">
   {{ range .Pages.ByDate.Reverse }}
   <li>
-    <p class="blog-item-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+    <p class="posts-item-date">{{ .Date.Format "Jan 2, 2006" }}</p>
     {{ partial "tags.html" .Params.tags }}
-    <a href="{{ .RelPermalink }}" class="blog-item-title">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}" class="posts-item-title">{{ .Title }}</a>
   </li>
   {{ end }}
 </ul>
