@@ -1,0 +1,9 @@
+<nav>
+  <a href="/" class="logo">
+    <h1>P</h1>
+    <span class="logo-bang">!</span>
+  </a>
+  {{ range .Site.Menus.main }}
+  <a href="{{ .URL }}" class="nav-link">{{ .Name }}</a>
+  {{ end }}
+</nav>

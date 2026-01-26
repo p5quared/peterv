@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="home-grid">
+  <div class="prose">
+    <h1>Hi, I'm<br><span>Peter Vaiciulis</span></h1>
+    <p>I'm from NY, USA and among other things, I enjoy writing code. Lately I've found myself writing code for the web; my primary interests lie in distributed systems, developer tooling, and full-stack development.</p>
+    <p>When I'm not writing code you'll probably find me sailing, playing poker or piano, or still trying to finish Crime & Punishment after all these years.</p>
+    <a href="{{ .Site.Params.github }}" target="_blank" class="github-link">
+      <img src="{{ "github-mark.svg" | relURL }}" alt="GitHub">
+      <span>github.com/p5quared</span>
+    </a>
+  </div>
+
+  <div>
+    <div class="prose">
+      <h2>Work</h2>
+      <p>Here are a couple things I've been working on recently:</p>
+    </div>
+    <ul class="card-list" style="margin-top: 1.5rem;">
+      {{ $pinnedProjects := where (where .Site.RegularPages "Section" "work") ".Params.pinned" true }}
+      {{ range first 3 $pinnedProjects }}
+      {{ partial "project-card.html" . }}
+      {{ end }}
+    </ul>
+  </div>
+</div>
+{{ end }}

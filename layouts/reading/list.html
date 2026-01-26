@@ -1,0 +1,28 @@
+{{ define "main" }}
+<p class="intro-text">This page has some of the things I've been reading recently or plan to read, and I think are worth sharing. This section is pretty new; I swear I read more than this!</p>
+
+<hr>
+
+{{ if .Site.Data.reading }}
+<ul class="card-list mt-8">
+  {{ range .Site.Data.reading }}
+  <li class="reading-card">
+    {{ with .image }}
+    <img src="{{ . }}" alt="" class="reading-card-image">
+    {{ end }}
+    <div>
+      {{ partial "tags.html" .tags }}
+      <a href="{{ .link }}" target="_blank">
+        <h2>{{ .title }}</h2>
+      </a>
+      {{ with .description }}
+      <p class="prose">{{ . }}</p>
+      {{ end }}
+    </div>
+  </li>
+  {{ end }}
+</ul>
+{{ else }}
+<p>No readings found</p>
+{{ end }}
+{{ end }}

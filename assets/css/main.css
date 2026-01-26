@@ -1,0 +1,441 @@
+/* CSS Custom Properties */
+:root {
+  --color-background: #FDFDF9;
+  --color-text: #011627;
+  --color-links: #3E885B;
+  --color-tags: #FF9F1C;
+  --shadow-encore: 5px 5px 1px #011627;
+  --font-sans: Roboto, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+a {
+  color: var(--color-links);
+  text-decoration: underline;
+  transition: filter 0.2s ease;
+}
+
+a:hover {
+  filter: brightness(1.5);
+}
+
+/* Container */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0 2rem;
+  align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+  nav {
+    gap: 3rem;
+    padding: 2rem 0;
+  }
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text) !important;
+}
+
+nav a:hover {
+  filter: none !important;
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+  transition: all 0.9s ease;
+}
+
+.logo:hover {
+  color: var(--color-links) !important;
+  transform: scale(1.5) rotate(12deg);
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.logo-bang {
+  transform: rotate(15deg);
+}
+
+@media (min-width: 768px) {
+  .logo-bang {
+    font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-bang {
+    font-size: 3rem;
+  }
+}
+
+.nav-link {
+  font-size: 1.25rem;
+  color: var(--color-text);
+  border-bottom: 4px solid transparent;
+  padding-bottom: 0;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  border-bottom-color: var(--color-links);
+}
+
+/* Main content */
+main {
+  padding-bottom: 3rem;
+}
+
+/* Homepage grid */
+.home-grid {
+  display: grid;
+  gap: 4rem;
+}
+
+@media (min-width: 768px) {
+  .home-grid {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Prose styling */
+.prose {
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+@media (min-width: 1024px) {
+  .prose {
+    font-size: 1.25rem;
+  }
+}
+
+.prose p {
+  margin-bottom: 1rem;
+}
+
+.prose h1 {
+  margin-bottom: 0;
+}
+
+.prose h2 {
+  margin-bottom: 0.5rem;
+}
+
+.prose a {
+  color: var(--color-links);
+}
+
+.prose blockquote {
+  border-left: 4px solid var(--color-links);
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+}
+
+.prose ul, .prose ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose code {
+  background-color: #f0f0f0;
+  padding: 0.125rem 0.375rem;
+  border-radius: 3px;
+  font-size: 0.875em;
+}
+
+.prose pre {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.prose pre code {
+  background: none;
+  padding: 0;
+}
+
+.prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Cards */
+.card {
+  border: 2px solid var(--color-text);
+  padding: 1rem;
+  box-shadow: var(--shadow-encore);
+  background-color: #fafaf5;
+}
+
+.card-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Project cards on homepage */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-date {
+  font-size: 0.875rem;
+  min-width: fit-content;
+  padding-bottom: 0.5rem;
+}
+
+.card h3 {
+  margin: 0;
+}
+
+.card p {
+  line-height: 1.4;
+}
+
+/* Work list page */
+.work-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.work-item-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.work-item-title {
+  font-size: 1.5rem;
+}
+
+/* Tags */
+.tags {
+  list-style: none;
+  display: inline;
+}
+
+.tags li {
+  display: inline-block;
+  margin-right: 0.75rem;
+  color: var(--color-tags);
+}
+
+/* Reading cards */
+.reading-card {
+  border: 2px solid var(--color-text);
+  padding: 1rem;
+  background-color: #fafaf5;
+}
+
+@media (min-width: 1024px) {
+  .reading-card {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+.reading-card-image {
+  height: 8rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .reading-card-image {
+    height: 16rem;
+    margin-bottom: 0;
+  }
+}
+
+.reading-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.reading-card a {
+  text-decoration: none;
+}
+
+.reading-card p {
+  line-height: 1.4;
+  margin-top: 0.5rem;
+}
+
+/* About page */
+.about-content {
+  max-width: 65ch;
+}
+
+.about-content img {
+  float: left;
+  margin: 1rem 1rem 1rem 0;
+  width: 16rem;
+  border-radius: 50%;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+}
+
+/* Blog */
+.blog-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.blog-item-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.blog-item-title {
+  font-size: 1.5rem;
+}
+
+/* Article page */
+article header {
+  margin-bottom: 2rem;
+}
+
+article header h1 {
+  margin-bottom: 0.5rem;
+}
+
+article header .date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.article-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.article-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* GitHub link on homepage */
+.github-link {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.github-link img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Intro paragraph */
+.intro-text {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1.5rem 0;
+}
+
+/* Spacing utility */
+.space-y-16 > * + * {
+  margin-top: 4rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+/* Apple Music embed */
+.apple-music-embed {
+  margin: 1.5rem 0;
+}

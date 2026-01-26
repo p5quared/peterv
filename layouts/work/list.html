@@ -1,0 +1,11 @@
+{{ define "main" }}
+<ul class="work-list">
+  {{ range .Pages.ByDate.Reverse }}
+  <li>
+    <p class="work-item-date">{{ .Date.Format "Jan 2, 2006" }}</p>
+    {{ partial "tags.html" .Params.tags }}
+    <a href="{{ .RelPermalink }}" class="work-item-title">{{ .Title }}</a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
