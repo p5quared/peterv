@@ -47,5 +47,6 @@ Which would you rather have Claude do?
 This isn't a bad thing--it's arguably more fun than ever to design code because implementing
 designs takes seconds or minutes. My point is that in the past you might have spent some of the coding time iterating
 and improving on the design you are implementing. However, our model tools have settled on a strategy of
-picking a plan once and sticking to it till the end. So lean into it, plan shit out--build Claude a bouncy house
+picking a plan once and sticking to it till the end. In my experience so far, spending more time on upfront planning saves
+an outsized amount of time in agentic implementation. So lean into it, plan shit out--build Claude a bouncy house
 and let the adrenaline fueled token stream run wild.
