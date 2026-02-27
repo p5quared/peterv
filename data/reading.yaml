@@ -1,6 +1,7 @@
 - title: "One Million PDFs in 10 Minutes for 40 Cents"
   link: "https://www.ersteiger.com/posts/rendering-one-million-pdfs/"
   description: "An interesting, simple system design maximizing scalability and cost with Rust and AWS."
+  date: 2025-12-10
   tags:
     - "software"
     - "system design"
@@ -9,6 +10,7 @@
 - title: "Storing Data in Control Flow"
   link: "https://research.swtch.com/pcdata"
   description: "A decision that arises over and over when designing concurrent programs is whether to represent program state in control flow or as data. This post is about what that decision means and how to approach it."
+  date: 2025-09-15
   tags:
     - "rsc"
     - "go"
@@ -18,6 +20,7 @@
 - title: "Why Facebook Doesn't Use Git"
   link: "https://graphite.dev/blog/why-facebook-doesnt-use-git"
   description: "Why do Facebookers (Metamates 🏴‍☠️) not use Git? Why adopt Mercurial instead and build custom workflows on top of it?"
+  date: 2025-06-20
   tags:
     - "software"
     - "tooling"
@@ -26,6 +29,7 @@
 - title: "On Mental Toughness (for Software Engineers): How the Best of the Best Get Better And Better"
   link: "https://stolee.dev/2019/10/27/mental-toughness-1.html"
   description: "This post is part of a series where I try to take generic business articles and view them through my lens as an individual contributor software engineer."
+  date: 2025-02-14
   tags:
     - "philosophy"
   image: "https://avatars.githubusercontent.com/u/570044?v=4"
@@ -33,6 +37,7 @@
 - title: "Why Should I Care What Color the Bikeshed Is?"
   link: "https://bikeshed.com/"
   description: "The really, really short answer is that you should not. The somewhat longer answer is that just because you are capable of building a bikeshed does not mean you should stop others from building one just because you do not like the color they plan to paint it. "
+  date: 2024-12-05
   tags:
     - "philosophy"
     - "niche"
@@ -41,6 +46,7 @@
 - title: "Hash-Based Bisect Debugging in Compilers and Runtimes"
   link: "https://research.swtch.com/bisect"
   description: "Does this sound familar? You make a change to a library to optimize its performance or clean up technical debt or fix a bug, only to get a bug report: some very large, incomprehensibly opaque test is now failing. Now you have a major debugging job in an unfamiliar code base.  What if I told you that a magic wand exists that can pinpoint the relevant line of code or call stack in that unfamiliar code base?"
+  date: 2024-10-01
   tags:
     - "algorithms"
     - "technical"
@@ -50,6 +56,7 @@
 - title: "Roblox Expands Immersive Video Ads Access to All Advertisers, Adds New Measurement Partners"
   link: "https://corp.roblox.com/newsroom/2024/05/roblox-expands-immersive-video-ads-access-to-all-advertisers-adds-new-measurement-partners"
   description: "Early research points to the scaled opportunity for brands to connect with Gen Z consumers on Roblox via new and engaging ad formats."
+  date: 2024-06-12
   tags:
     - "society"
     - "technology"
@@ -57,7 +64,8 @@
 
 - title: "What If Data Is a Bad Idea?"
   link: "https://schmud.de/posts/2024-08-18-data-is-a-bad-idea.html"
-  description: "Several years ago, esteemed computer scientist Alan Kay participated in an Ask Me Anything on Hacker News. The dialogue was kicked off by Kay’s provocative musing on the legitimacy of data; not just some data, but the idea of data itself. It was a bit like a physicist asking, “What if gravity is a bad idea?”"
+  description: "Several years ago, esteemed computer scientist Alan Kay participated in an Ask Me Anything on Hacker News. The dialogue was kicked off by Kay's provocative musing on the legitimacy of data; not just some data, but the idea of data itself. It was a bit like a physicist asking, \"What if gravity is a bad idea?\""
+  date: 2024-09-02
   tags:
     - "data"
     - "philosophical"
@@ -67,6 +75,7 @@
 - title: "uv: An Extremely Fast Python Package Manager"
   link: "https://www.youtube.com/watch?v=gSKTfG1GXYQ"
   description: "A fascinating dive into some of the technical problems faced in implementing the latest competing standard."
+  date: 2024-05-18
   tags:
     - "software"
     - "tooling"
@@ -76,13 +85,15 @@
 - title: "Blame the Computer"
   link: "https://thebaffler.com/salvos/blame-the-computer-pein"
   description: "EVIDENCE MOUNTS THAT THE FORCES OF DIGITAL CIVILIZATION have produced a technological dystopia run by artificially unintelligent algorithms designed in the interests of greed for maximum efficiency."
+  date: 2024-03-22
   tags:
     - "philosophy"
   image: "https://thebaffler.com/wp-content/uploads/2018/03/B38_Pein_opener.jpg"
 
-- title: "How to review code effectively: A GitHub staff engineer’s philosophy"
+- title: "How to review code effectively: A GitHub staff engineer's philosophy"
   link: "https://github.blog/developer-skills/github/how-to-review-code-effectively-a-github-staff-engineers-philosophy/"
   description: "GitHub Staff Engineer Sarah Vessels discusses her philosophy of code review, what separates good code review from bad, her strategy for finding and reviewing code, and how to get the most from reviews of her own code."
+  date: 2024-01-15
   tags:
     - "github"
     - "engineering"
@@ -91,6 +102,7 @@
 - title: "Distributed Computing Manifesto"
   link: "https://www.allthingsdistributed.com/2022/11/amazon-1998-distributed-computing-manifesto.html"
   description: "Who desn't love a good manifesto."
+  date: 2023-10-20
   tags:
     - "technical"
   image: "https://www.allthingsdistributed.com/images/dcm-workflow-hi-res.jpg"

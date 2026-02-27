@@ -1,26 +1,43 @@
 {{ define "main" }}
-<div class="home-grid">
-  <div class="prose">
-    <h1>Hi, I'm<br><span>Peter Vaiciulis</span></h1>
-    <p>I'm from NY, USA and among other things, I enjoy writing code. Lately I've found myself writing code for the web; my primary interests lie in distributed systems, developer tooling, and full-stack development.</p>
-    <p>When I'm not writing code you'll probably find me sailing, playing poker or piano, or still trying to finish Crime & Punishment after all these years.</p>
-    <a href="{{ .Site.Params.github }}" target="_blank" class="github-link">
-      <img src="{{ "github-mark.svg" | relURL }}" alt="GitHub">
-      <span>github.com/p5quared</span>
-    </a>
-  </div>
+<div class="tile-grid">
+  {{/* Build unified collection of posts and readings with dates */}}
+  {{ $items := slice }}
 
-  <div>
-    <div class="prose">
-      <h2>Work</h2>
-      <p>Here are a couple things I've been working on recently:</p>
-    </div>
-    <ul class="card-list" style="margin-top: 1.5rem;">
-      {{ $pinnedProjects := where (where .Site.RegularPages "Section" "work") ".Params.pinned" true }}
-      {{ range first 3 $pinnedProjects }}
-      {{ partial "project-card.html" . }}
-      {{ end }}
+  {{ range $post := where .Site.RegularPages "Section" "posts" }}
+    {{ $items = $items | append (dict "type" "post" "title" $post.Title "description" $post.Description "tags" $post.Params.tags "href" $post.RelPermalink "date" $post.Date) }}
+  {{ end }}
+
+  {{ range $reading := .Site.Data.reading }}
+    {{ $items = $items | append (dict "type" "reading" "title" $reading.title "description" $reading.description "tags" $reading.tags "href" $reading.link "date" (time $reading.date)) }}
+  {{ end }}
+
+  {{/* Sort by date descending and render */}}
+  {{ range $i, $item := sort $items "date" "desc" }}
+  {{ $isReading := eq $item.type "reading" }}
+  {{/* Derive a pseudo-random size from title hash for organic layout */}}
+  {{ $hash := md5 $item.title }}
+  {{ $char := index (split $hash "") 0 }}
+  {{ $sizeClass := "" }}
+  {{ if or (eq $char "a") (eq $char "b") (eq $char "1") }}
+    {{ $sizeClass = " tile--wide" }}
+  {{ else if or (eq $char "c") (eq $char "2") }}
+    {{ $sizeClass = " tile--tall" }}
+  {{ else if or (eq $char "d") (eq $char "3") }}
+    {{ $sizeClass = " tile--large" }}
+  {{ end }}
+  <a href="{{ $item.href }}"{{ if $isReading }} target="_blank" rel="noopener"{{ end }} class="tile tile--{{ $item.type }}{{ $sizeClass }}">
+    <span class="tile__type tile__type--{{ $item.type }}">{{ $item.type }}</span>
+    {{ if $isReading }}<span class="tile__external">&#8599;</span>{{ end }}
+    <h3 class="tile__title">{{ $item.title }}</h3>
+    {{ with $item.description }}
+    <p class="tile__description">{{ . }}</p>
+    {{ end }}
+    {{ with $item.tags }}
+    <ul class="tile__tags">
+      {{ range . }}<li>{{ . }}</li>{{ end }}
     </ul>
-  </div>
+    {{ end }}
+  </a>
+  {{ end }}
 </div>
 {{ end }}

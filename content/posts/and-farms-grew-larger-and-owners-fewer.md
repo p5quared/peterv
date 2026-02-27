@@ -9,14 +9,14 @@ As I wrap up my college education and prepare to begin the rest of my life, I ha
 
 I'm not sure I agree, but to set the stage and perpetuate a little hysteria I'd like to share a post made by a student in an online (in-class) forum at my school which I've slightly abbreviated and anonymized: 
 
-> **Is it the end?
+> **Is it the end?**
 
-**Everyone, Cursor AI is dropped. Are we all doomed?
+> Everyone, Cursor AI is dropped. Are we all doomed?
 As a (wannabe) startup founder, I was stressing about hiring systems, security, software, pen testing, and AI engineers. But after trying out and diving into Cursor, it ... it just ... it just ... do all of those?
 
-Professor *Foo*, do you have advice for us moving forward, especially on navigating our career and achievements? Should we try to become an even better Software Engineer and know our new tools, should we pursue deeper topics in Computer Science and research, should we focus on doing sustainable businesses, or applications of technology in solving prominent issues in other interdisciplinary fields, etc.?
+> Professor *Foo*, do you have advice for us moving forward, especially on navigating our career and achievements? Should we try to become an even better Software Engineer and know our new tools, should we pursue deeper topics in Computer Science and research, should we focus on doing sustainable businesses, or applications of technology in solving prominent issues in other interdisciplinary fields, etc.?
 
-What I am trying to get at is how do we reconcile our Computer Science degree with the ever-changing landscape of business and economy, and be successful? How do we find ourselves and what we are truly good at? What are the core things/skills/aspects that will always be needed in the future?
+> What I am trying to get at is how do we reconcile our Computer Science degree with the ever-changing landscape of business and economy, and be successful? How do we find ourselves and what we are truly good at? What are the core things/skills/aspects that will always be needed in the future?
 
 Now, I am inclined to believe that this student is wrong. That being said, he may be on the right track with the part about finding ourselves... /s
 
