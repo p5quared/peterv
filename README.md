@@ -2,8 +2,6 @@
 
 Personal website built with [Hugo](https://gohugo.io/).
 
-Credit to @Merilynn Bandy for design.
-
 ## Development
 
 ```bash
