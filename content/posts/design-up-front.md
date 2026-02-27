@@ -5,15 +5,14 @@ description: "Rethink agile for agents."
 tags: ["software", "ai"]
 ---
 
-You open your terminal and enter claude. "Welcome back Peter!", it says to you, making you feel warm inside.
-In the console you write,
-"Build me a chess analysis tool that can load my chess games from chess.com and analyze my games to find
+You open your terminal and enter `claude`, "Welcome back Peter!", it says to you, making you feel warm inside.
+In the console you write, "Build me a chess analysis tool that can load my chess games from chess.com and analyze my games to find
 frequent inaccuracies and suggest improvements." The thinking indicator pulses gently, the token counter whirs to life,
 electricity is rerouted from hospitals to GPUs, _magic begins_. Thirty minutes later Mr. Claude returns from his meditative expedition,
 having produced what must be some of the most well crafted, idiomatic, and pragmatic software the world has ever seen.
 
-Excitedly, you enter `dune build && dune exec chess analyzer: Error: Cannot compile lib/domain/user.ml because it depends on
-lib/domain/order.ml which depends on lib/domain/user.ml`. No. This can't be. You beg claude to resolve the circular dependency
+Excitedly, you enter `dune build && dune exec chess analyzer: Error: Cannot compile lib/domain/board.ml because it depends on
+lib/domain/move.ml which depends on lib/domain/board.ml`. No. This can't be. You beg claude to resolve the circular dependency
 but he only laughs and taunts you with a $200 bill.
 
 You wake up covered in sweat, your laptop closed beside you. Phew, it was just a dream.
