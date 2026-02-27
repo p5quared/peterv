@@ -20,3 +20,7 @@ title = "peterv!"
   home = ["HTML"]
   section = ["HTML"]
   page = ["HTML"]
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
