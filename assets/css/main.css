@@ -302,7 +302,7 @@ main {
 .prose {
   font-size: 1.125rem;
   line-height: 1.75;
-  max-width: 72ch;
+  max-width: 50ch;
 }
 
 @media (min-width: 1024px) {
