@@ -1,7 +1,20 @@
+- title: "How to Test"
+  link: "https://matklad.github.io/2021/05/31/how-to-test.html"
+  description: >
+     Alternative titles:
+     Unit Tests are a Scam
+     Test Features, Not Code
+     Data Driven Integrated Tests
+  date: 2025-10-10
+  tags:
+    - "software"
+    - "matklad"
+  image: "https://www.ersteiger.com/_astro/arch_light.CqUpWaIx_ZXeWzq.svg"
+
 - title: "One Million PDFs in 10 Minutes for 40 Cents"
   link: "https://www.ersteiger.com/posts/rendering-one-million-pdfs/"
   description: "An interesting, simple system design maximizing scalability and cost with Rust and AWS."
-  date: 2025-12-10
+  date: 2025-07-10
   tags:
     - "software"
     - "system design"
@@ -10,7 +23,7 @@
 - title: "Storing Data in Control Flow"
   link: "https://research.swtch.com/pcdata"
   description: "A decision that arises over and over when designing concurrent programs is whether to represent program state in control flow or as data. This post is about what that decision means and how to approach it."
-  date: 2025-09-15
+  date: 2024-09-15
   tags:
     - "rsc"
     - "go"
