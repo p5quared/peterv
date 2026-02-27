@@ -189,7 +189,7 @@ main {
 
 .tile:active {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #1a1a1a;
+  box-shadow: 2px 2px 0 #1a1a1a, 0 4px 8px rgba(0,0,0,0.08);
 }
 
 .tile--post {
@@ -202,12 +202,12 @@ main {
 }
 
 .tile--reading {
-  border-color: #555;
-  box-shadow: 5px 5px 0 #555;
+  border-color: #1a1a1a;
+  box-shadow: 5px 5px 0 #1a1a1a;
 }
 
 .tile--reading:hover {
-  box-shadow: 7px 7px 0 #555;
+  box-shadow: 7px 7px 0 #1a1a1a;
 }
 
 /* Default tile spans 2 of 6 columns on desktop, 2 of 4 on tablet */
