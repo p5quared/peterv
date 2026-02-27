@@ -1,0 +1,26 @@
+baseURL = "https://peterv.net/"
+languageCode = "en-us"
+title = "peterv!"
+
+[params]
+  description = "This is my little slice of the web."
+  author = "Peter Vaiciulis"
+  github = "https://github.com/p5quared"
+  email = "petervaiciulis@gmail.com"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = false
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"

@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <p class="date">{{ .Date.Format "Jan 2, 2006" }}</p>
+    {{ partial "tags.html" .Params.tags }}
+  </header>
+  <div class="prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}
