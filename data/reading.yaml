@@ -1,3 +1,11 @@
+- title: "The properties of crash only software"
+  link: "https://brooker.co.za/blog/2012/01/22/crash-only.html"
+  description: "Crash-only software by Candea and Fox is a very interesting paper which is well worth your time if you spend any time designing software or services."
+  date: 2026-02-28
+  tags:
+    - "software"
+    - "brooker"
+
 - title: "How to Test"
   link: "https://matklad.github.io/2021/05/31/how-to-test.html"
   description: >
