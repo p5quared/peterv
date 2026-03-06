@@ -1,0 +1,168 @@
+{
+  "selectedTemplate": 1,
+  "headings": {
+    "skills": "Skills & Hobbies",
+    "projects": "Projects",
+    "awards": "",
+    "education": "Education",
+    "work": "Work Experience"
+  },
+  "basics": {
+    "name": "Peter Vaiciulis",
+    "email": "petervaiciulis@gmail.com",
+    "phone": "5184192277",
+    "location": {
+      "address": "Seattle, WA"
+    },
+    "website": "peterv.net"
+  },
+  "education": [
+    {
+      "location": "Buffalo, NY",
+      "studyType": "B.S.",
+      "startDate": "Fall 2023",
+      "endDate": "Spring 2025",
+      "institution": "University at Buffalo, SUNY",
+      "area": "Computer Science"
+    }
+  ],
+  "work": [
+    {
+      "location": "Seattle, WA",
+      "website": "",
+      "startDate": "Jun 2025",
+      "endDate": "Present",
+      "highlights": [
+        "Designed and implemented a new routing rule engine which evaluated tenant defined rules against requests to define new route targets, significantly expanding customer capabilities and framework parity",
+        "Developed workarounds to upgrade deep Rust dependencies to resolve issues that had been pending for months, allowing the deletion of significant feature flagged customer-specific code",
+        "Designed solution to overcome bottleneck and increase maximum customer deployment throughput by over 100x"
+      ],
+      "company": "Amazon Web Services (AWS)",
+      "position": "Software Developer Engineer"
+    },
+    {
+      "highlights": [
+        "Designed and implemented a new API (build and runtime logic for the Amplify.js framework) for customers to model generated SQL fields."
+      ],
+      "company": "Amazon Web Services (AWS)",
+      "position": "Software Developer Engineer Intern",
+      "startDate": "Aug 2024",
+      "endDate": "Nov 2024",
+      "location": "Seattle, WA"
+    },
+    {
+      "highlights": [
+        "Designed and implemented a pipeline for website telemetry data",
+        "Optimized CI pipeline, reducing deployment time by as much as 50%"
+      ],
+      "company": "Trusted Nurse Staffing",
+      "position": "Software Engineer Intern",
+      "location": "Buffalo, NY",
+      "startDate": "May 2024",
+      "endDate": "Aug 2024"
+    },
+    {
+      "highlights": [
+        "Started and operated a boat rental business in upstate NY",
+        "Built and managed online reservation system, payments, book-keeping, boating, etc.."
+      ],
+      "company": "boatADK",
+      "position": "Owner",
+      "location": "Lake Placid, NY",
+      "startDate": "Jan 2020",
+      "endDate": "Aug 2023"
+    },
+    {
+      "highlights": [
+        "Hosted dinners and cocktail parties with atheletes, financiers, and leaders in business and politics"
+      ],
+      "company": "The Point Resort",
+      "position": "Property Host",
+      "location": "Saranac Lake, NY",
+      "startDate": "Oct 2020",
+      "endDate": "Jun 2021"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Technical Languages",
+      "level": "",
+      "keywords": [
+        "Typescript",
+        "Rust",
+        "Python",
+        "Java",
+        "Kotlin"
+      ]
+    },
+    {
+      "keywords": [
+        "Tower",
+        "Supabase",
+        "Quarkus",
+        "SvelteKit",
+        "Axum"
+      ],
+      "name": "Frameworks/Tools"
+    },
+    {
+      "keywords": [
+        "Piano",
+        "Sailing",
+        "Poker",
+        "Snowboarding"
+      ],
+      "name": "Hobbies"
+    }
+  ],
+  "projects": [
+    {
+      "keywords": [
+        "Lua",
+        "AppleScript"
+      ],
+      "name": "apple-music.nvim",
+      "description": "The most popular Apple Music plugin for Neovim, which allows users to control Apple Music from the best text editor (Neovim)."
+    },
+    {
+      "keywords": [
+        "Java",
+        "Quarkus"
+      ],
+      "name": "Bazillionaire (WIP)",
+      "description": "A live multiplayer stock-trading game."
+    },
+    {
+      "keywords": [
+        "Go",
+        "Homebrew"
+      ],
+      "name": "Decanter",
+      "description": "A user-friendly command-line-interface for students at the University at Buffalo to manage coursework and submit assignments via Carnegie Mellon's 'Autolab'. Decanter is released as a tap on Homebrew"
+    },
+    {
+      "keywords": [
+        "NautalisTrader",
+        "LangGraph"
+      ],
+      "description": "A framework  for agentic algotrading research and development cenetered around declarative strategy definitions.",
+      "name": "Manifesto (WIP)"
+    }
+  ],
+  "awards": [
+    {
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "education",
+    "work",
+    "projects",
+    "skills",
+    "awards"
+  ]
+}
