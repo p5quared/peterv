@@ -1,7 +1,7 @@
 ---
 title: "Design Up Front"
 date: 2026-01-26
-description: "Rethink agile for agents."
+description: "Agents appreciate code hygeine."
 tags: ["software", "ai"]
 ---
 
