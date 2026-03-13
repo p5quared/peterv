@@ -1,3 +1,12 @@
+- title: "Prompting 101: Show Don't Tell"
+  link: "https://haskellforall.com/2026/01/prompting-101-show-dont-tell"
+  description: "Crash-only software by Candea and Fox is a very interesting paper which is well worth your time if you spend any time designing software or services."
+  date: 2025-11-04
+  tags:
+    - "software"
+    - "ai"
+    - "Gabriella439"
+
 - title: "The properties of crash only software"
   link: "https://brooker.co.za/blog/2012/01/22/crash-only.html"
   description: "Crash-only software by Candea and Fox is a very interesting paper which is well worth your time if you spend any time designing software or services."
