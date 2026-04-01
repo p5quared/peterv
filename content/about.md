@@ -5,6 +5,8 @@ title: "Me"
 
 <div class="about-content">
 
+<a href="https://github.com/p5quared" class="italic">github</a>
+
 <img src="/images/memtn.jpg" alt="selfie of me">
 
 I am, in the most succinct form possible, a J/24 sailor, a loose poker player, a closeted music major, a wannabe math major, and a programmer.
@@ -26,5 +28,6 @@ When I'm not programming, you'll probably find me sailing on Lake Champlain or a
 If you are not a robot and want to get in touch you can reach me here: [petervaiciulis@gmail.com](mailto:petervaiciulis@gmail.com).
 
 </div>
+
 
 <a href="/resume.pdf" target="_blank" class="italic">resume</a>
