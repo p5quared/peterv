@@ -15,10 +15,11 @@ title = "peterv!"
   [markup.highlight]
     style = "github"
     lineNos = false
+    noClasses = false
 
 [outputs]
-  home = ["HTML"]
-  section = ["HTML"]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
   page = ["HTML"]
 
 [caches]

@@ -1,0 +1,8 @@
+# Edit this file to change what shows on the homepage's "now playing" card.
+# Delete the file (or empty it) to hide the card entirely.
+title: "Cello Suite No. 1 in G Major: I. Prélude"
+artist: "Yo-Yo Ma"
+album: "Six Evolutions: Bach"
+length: "2:54"
+apple_music_url: "https://embed.music.apple.com/us/album/not/1473012904?i=1473013069&amp;itscg=30200&amp;itsct=music_box_player&amp;ls=1&amp;app=music&amp;mttnsubad=1473013069&amp;theme=auto"
+# artwork: "https://example.com/art.jpg"

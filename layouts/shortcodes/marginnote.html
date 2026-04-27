@@ -1,0 +1,5 @@
+{{- $label := .Get "label" | default "aside" -}}
+<aside class="margin-note">
+  <span class="margin-note__label">{{ $label }} →</span>
+  {{ .Inner | markdownify }}
+</aside>

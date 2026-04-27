@@ -1,0 +1,12 @@
+{{- $np := .Site.Data.now_playing -}}
+{{- if $np -}}
+{{ partial "section-header.html" (dict "label" "now playing" "title" "") }}
+<figure class="music-card">
+  <div class="music-card__frame">
+    <span class="music-card__tab">♪ on the desk</span>
+    <iframe height="175" src="{{ $np.apple_music_url }}"
+      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+      allow="autoplay *; encrypted-media *; clipboard-write"></iframe>
+  </div>
+</figure>
+{{- end -}}

@@ -1,11 +1,53 @@
 {{ define "main" }}
-<article>
-  <header>
-    <h1>{{ .Title }}</h1>
-    {{ with .Date }}<p class="date">{{ .Format "Jan 2, 2006" }}</p>{{ end }}
-  </header>
-  <div class="prose">
+<div class="page-title">
+  <div class="page-title__kicker">a brief biography</div>
+  <h1 class="page-title__h1">The Editor of <em>this Almanac</em></h1>
+  <div class="center-mark">{{ partial "marks/squiggle.html" (dict "width" 140 "height" 10 "stroke" 1.6) }}</div>
+</div>
+
+<div class="about-spread">
+  <div>
+    {{ $portrait := .Params.portrait | default "/images/memtn.jpg" }}
+    <figure class="fig about-portrait">
+      <div class="fig__media"><img src="{{ $portrait }}" alt="portrait of the editor"></div>
+      {{ with .Params.portrait_caption }}
+      <figcaption class="fig__caption">
+        <span>{{ . }}</span>
+        {{ with $.Params.portrait_credit }}<span class="fig__credit">↳ {{ . }}</span>{{ end }}
+      </figcaption>
+      {{ end }}
+    </figure>
+
+    <div class="drawn-box about-stats">
+      {{ partial "marks/drawn-box.html" . }}
+      <div style="position:relative;">
+        <div class="about-stats__title">vital statistics</div>
+        {{ if .Params.stats }}
+        <table>
+          <tbody>
+          {{ range .Params.stats }}
+            <tr><td class="k">{{ .key }}</td><td class="v">{{ .value }}</td></tr>
+          {{ end }}
+          </tbody>
+        </table>
+        {{ else }}
+        <div class="about-stats__empty">— to be filled in —</div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="about-contact">
+      <div class="about-contact__title">get in touch</div>
+      <ul>
+        <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
+        <li><a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">{{ replace .Site.Params.github "https://" "" }}</a></li>
+        <li><a href="{{ "/resume.pdf" | relURL }}" target="_blank" rel="noopener">resume.pdf</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="about-bio">
     {{ .Content }}
   </div>
-</article>
+</div>
 {{ end }}

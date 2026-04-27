@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{- $posts := (where .Site.RegularPages "Section" "writing").ByDate -}}
+{{- $issueNum := 0 -}}
+{{- range $i, $p := $posts -}}{{- if eq $p.RelPermalink $.RelPermalink -}}{{- $issueNum = add $i 1 -}}{{- end -}}{{- end -}}
+<article class="article">
+  <header class="article__header">
+    <div class="article__meta-top">
+      <span class="article__issue">№ {{ printf "%02d" $issueNum }}</span>
+      <span class="article__sep">·</span>
+      <span class="article__kicker">{{ if .Params.kicker }}{{ .Params.kicker }}{{ else }}An Essay{{ end }}</span>
+      <span class="article__sep">·</span>
+      <span class="article__readtime">~ {{ .ReadingTime }} min read</span>
+    </div>
+    <h1 class="article__title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="article__deck">{{ . }}</p>{{ end }}
+    <div class="article__byline">
+      <span>By <span class="author">{{ .Site.Params.author }}</span></span>
+      <span class="article__sep">·</span>
+      <span>{{ .Date.Format "January 2, 2006" }}</span>
+      {{ with .Params.tags }}<span class="article__sep">·</span>{{ partial "tags.html" . }}{{ end }}
+    </div>
+  </header>
+
+  {{ .Content }}
+
+  <div class="article__footer">
+    {{ with .Params.tags }}<div class="article__filed">Filed under {{ partial "tags.html" . }}</div>{{ end }}
+    <div class="article__nav">
+      {{ with .PrevInSection }}<a href="{{ .RelPermalink }}">← prev</a>{{ end }}
+      {{ with .NextInSection }}<a href="{{ .RelPermalink }}">next →</a>{{ end }}
+    </div>
+  </div>
+</article>
+{{ end }}

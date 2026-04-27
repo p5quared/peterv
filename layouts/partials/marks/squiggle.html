@@ -1,0 +1,6 @@
+{{- $width := .width | default 120 -}}
+{{- $height := .height | default 8 -}}
+{{- $stroke := .stroke | default 1.4 -}}
+<svg class="mark mark--squiggle" width="{{ $width }}" height="{{ $height }}" viewBox="0 0 {{ $width }} {{ $height }}" aria-hidden="true">
+  <path d="M 2 {{ sub $height 3 }} Q {{ mul (float $width) 0.18 }} 1.5, {{ mul (float $width) 0.36 }} {{ sub $height 3 }} T {{ mul (float $width) 0.66 }} {{ sub $height 3 }} T {{ sub $width 2 }} {{ sub $height 3 }}" fill="none" stroke="currentColor" stroke-width="{{ $stroke }}" stroke-linecap="round"/>
+</svg>

@@ -1,7 +1,1 @@
-{{ if . }}
-<ul class="tags">
-  {{ range . }}
-  <li>{{ . }}</li>
-  {{ end }}
-</ul>
-{{ end }}
+{{ if . }}<span class="tags">{{ range $i, $t := . }}{{ if $i }}<span class="tags__sep">·</span>{{ end }}<span class="tags__hash">#</span>{{ $t }}{{ end }}</span>{{ end }}

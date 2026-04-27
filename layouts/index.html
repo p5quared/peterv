@@ -1,43 +1,75 @@
 {{ define "main" }}
-<div class="tile-grid">
-  {{/* Build unified collection of posts and readings with dates */}}
-  {{ $items := slice }}
+{{ $posts := where .Site.RegularPages "Section" "writing" }}
+{{ $posts = $posts.ByDate.Reverse }}
+{{ $featured := index $posts 0 }}
+{{ $rest := after 1 $posts | first 6 }}
+{{ $reading := first 5 (sort .Site.Data.reading "date" "desc") }}
 
-  {{ range $post := where .Site.RegularPages "Section" "posts" }}
-    {{ $items = $items | append (dict "type" "post" "title" $post.Title "description" $post.Description "tags" $post.Params.tags "href" $post.RelPermalink "date" $post.Date) }}
-  {{ end }}
+<div class="home__strap">
+  <div class="home__strap-lede">
+    I am and have been, like anyone, many things.
+	This page holds a small periodical of notes and salvage and really whatever the hell I want.
+  </div>
+  <div class="home__strap-mark">{{ partial "marks/squiggle.html" (dict "width" 120 "height" 10 "stroke" 1.6) }}</div>
+  <div></div>
+</div>
 
-  {{ range $reading := .Site.Data.reading }}
-    {{ $items = $items | append (dict "type" "reading" "title" $reading.title "description" $reading.description "tags" $reading.tags "href" $reading.link "date" (time $reading.date)) }}
-  {{ end }}
+<div class="home__cols">
+  <section class="home__posts">
+    {{ partial "section-header.html" (dict "label" "dispatches" "title" "Writing" "count" (len $posts)) }}
 
-  {{/* Sort by date descending and render */}}
-  {{ range $i, $item := sort $items "date" "desc" }}
-  {{ $isReading := eq $item.type "reading" }}
-  {{/* Derive a pseudo-random size from title hash for organic layout */}}
-  {{ $hash := md5 $item.title }}
-  {{ $char := index (split $hash "") 0 }}
-  {{ $sizeClass := "" }}
-  {{ if or (eq $char "a") (eq $char "b") (eq $char "1") }}
-    {{ $sizeClass = " tile--wide" }}
-  {{ else if or (eq $char "c") (eq $char "2") }}
-    {{ $sizeClass = " tile--tall" }}
-  {{ else if or (eq $char "d") (eq $char "3") }}
-    {{ $sizeClass = " tile--large" }}
-  {{ end }}
-  <a href="{{ $item.href }}"{{ if $isReading }} target="_blank" rel="noopener"{{ end }} class="tile tile--{{ $item.type }}{{ $sizeClass }}">
-    <span class="tile__type tile__type--{{ $item.type }}">{{ $item.type }}</span>
-    {{ if $isReading }}<span class="tile__external">&#8599;</span>{{ end }}
-    <h3 class="tile__title">{{ $item.title }}</h3>
-    {{ with $item.description }}
-    <p class="tile__description">{{ . }}</p>
+    {{ if $featured }}
+    <article class="featured">
+      <div class="featured__meta">
+        <span class="featured__star">★ featured</span>
+        <span class="featured__date">{{ $featured.Date.Format "Jan 2, 2006" }}</span>
+      </div>
+      <h2 class="featured__title"><a href="{{ $featured.RelPermalink }}">{{ $featured.Title }}</a></h2>
+      {{ with $featured.Description }}<p class="featured__deck">{{ . }}</p>{{ end }}
+      <div class="featured__foot">
+        {{ partial "tags.html" $featured.Params.tags }}
+        <a class="featured__more" href="{{ $featured.RelPermalink }}">continue reading →</a>
+      </div>
+    </article>
     {{ end }}
-    {{ with $item.tags }}
-    <ul class="tile__tags">
-      {{ range . }}<li>{{ . }}</li>{{ end }}
-    </ul>
+
+    {{ range $rest }}
+    <article class="journal__entry">
+      <div class="journal__date">
+        <div class="day">{{ .Date.Format "02" }}</div>
+        <div class="month">{{ .Date.Format "Jan" }}</div>
+        <div class="year">{{ .Date.Format "2006" }}</div>
+      </div>
+      <div>
+        <h3 class="journal__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ with .Description }}<p class="journal__desc">{{ . }}</p>{{ end }}
+        {{ partial "tags.html" .Params.tags }}
+      </div>
+    </article>
     {{ end }}
-  </a>
-  {{ end }}
+  </section>
+
+  <aside class="home__aside">
+    {{ partial "section-header.html" (dict "label" "from the stacks" "title" "Reading") }}
+    {{ range $reading }}
+    {{ $date := time .date }}
+    <a class="home-reading__entry" href="{{ .link }}" target="_blank" rel="noopener">
+      <div class="home-reading__head">
+        <span class="home-reading__source">↗ {{ with .source }}{{ . }}{{ else }}{{ replace (replace .link "https://" "") "http://" "" | strings.TrimSuffix "/" | strings.Split "/" | first 1 }}{{ end }}</span>
+        <span class="home-reading__date">{{ $date.Format "Jan 2" }}</span>
+      </div>
+      <h3 class="home-reading__title">{{ .title }}</h3>
+      {{ with .description }}<p class="home-reading__desc">{{ . }}</p>{{ end }}
+    </a>
+    {{ end }}
+
+    {{ partial "now-playing.html" . }}
+
+    <div class="rss-box">
+      <div class="rss-box__kicker">by post</div>
+      <div class="rss-box__body">Why can't we all just use <em>RSS</em>?</div>
+      <a class="rss-box__link" href="{{ "/writing/index.xml" | relURL }}">subscribe.xml ↗</a>
+    </div>
+  </aside>
 </div>
 {{ end }}

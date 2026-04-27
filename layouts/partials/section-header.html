@@ -1,0 +1,11 @@
+{{- $label := .label -}}
+{{- $title := .title -}}
+{{- $count := .count -}}
+<div class="section-header">
+  <div class="section-header__lead">
+    {{ partial "marks/star-bullet.html" . }}
+    <span class="section-header__label">{{ $label }}</span>
+    {{ with $title }}<span class="section-header__title">{{ . }}</span>{{ end }}
+  </div>
+  {{ with $count }}<span class="section-header__count">{{ . }} entries</span>{{ end }}
+</div>

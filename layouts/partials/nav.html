@@ -1,7 +1,8 @@
-<nav>
-  <a href="/" class="logo">
-    <h1>P</h1>
-    <span class="logo-bang">!</span>
-  </a>
-  <a href="/about/" class="nav-link">about</a>
+{{ $section := .Section }}
+{{ if .IsHome }}{{ $section = "home" }}{{ end }}
+<nav class="nav">
+  <a href="{{ "/about/" | relURL }}"   class="nav__link {{ if eq $section "about" }}is-active{{ end }}">about/</a>
+  <a href="{{ "/writing/" | relURL }}" class="nav__link {{ if eq $section "writing" }}is-active{{ end }}">writing/</a>
+  <a href="{{ "/reading/" | relURL }}" class="nav__link {{ if eq $section "reading" }}is-active{{ end }}">reading/</a>
+  <a href="{{ "/resume.pdf" | relURL }}" class="nav__link" target="_blank" rel="noopener">resume.pdf</a>
 </nav>

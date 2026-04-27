@@ -1,0 +1,8 @@
+{{- $kicker := .Get "kicker" -}}
+<div class="callout">
+  <div class="callout__inner">
+    {{ partial "marks/drawn-box.html" . }}
+    {{ with $kicker }}<div class="callout__kicker">{{ . }}</div>{{ end }}
+    <div class="callout__body">{{ .Inner | markdownify }}</div>
+  </div>
+</div>

@@ -1,13 +1,17 @@
 ---
 title: "Me"
+portrait: "/images/memtn.jpg"
+stats:
+  - {key: "Located",    value: "Seattle, WA"}
+  - {key: "Previously Located",    value: "Westport, NY"}
+  - {key: "Studies",    value: "RPI '20, BMCC '23, UB '25"}
+  - {key: "Current Profession", value: "SDE @ AWS"}
+  - {key: "Recent Profession", value: "Property Host @ The Point"}
+  - {key: "Vessel of Choice",     value: "J/24"}
+  - {key: "Hand",       value: "Right"}
+  - {key: "Instrument",       value: "Piano"}
+  - {key: "Coffee Shop",     value: "Slow Day Coffee"}
 ---
-
-
-<div class="about-content">
-
-<a href="https://github.com/p5quared" class="italic">github</a>
-
-<img src="/images/memtn.jpg" alt="selfie of me">
 
 I am, in the most succinct form possible, a J/24 sailor, a loose poker player, a closeted music major, a wannabe math major, and a programmer.
 
@@ -19,15 +23,7 @@ I've contributed to a number of open source projects used by thousands, and sinc
 
 In summer '24, I interned at Trusted Nurse Staffing doing a mix of data engineering and fullstack web development. In other words, I tried to move around big spreadsheets without breaking things and helped make the website look pretty.
 
-In fall '24' I interned at Amazon in Seattle, working on [AWS Amplify](https://aws.amazon.com/amplify/). I worked on the Amplify Data team, designing and implementing support for auto-increment SQL fields. I wish there were a simpler analogy I could think of...
-
-This summer (2025) I will be returning to Amazon as a full-time Software Development Engineer (SDE).
+In fall '24 I interned at Amazon in Seattle, working on [AWS Amplify](https://aws.amazon.com/amplify/). I worked on the Amplify Data team, designing and implementing support for database generated SQL fields (e.g. `SERIAL`).
+In the summer of '25 I returned to Amazon as a full time engineer, this time working on the dataplane for Amplify Hosting, where I reside to this day.
 
 When I'm not programming, you'll probably find me sailing on Lake Champlain or attending the Buffalo Philharmonic Orchestra.
-
-If you are not a robot and want to get in touch you can reach me here: [petervaiciulis@gmail.com](mailto:petervaiciulis@gmail.com).
-
-</div>
-
-
-<a href="/resume.pdf" target="_blank" class="italic">resume</a>

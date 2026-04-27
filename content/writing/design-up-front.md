@@ -34,8 +34,8 @@ or spend the bulk of your time steering the model to a sensible solution, or acc
 
 In an organized codebase you get two benefits. First, design patterns are meant to be a _lingua franca_,
 which means when I see two interfaces: `PricingStrategy` and `PricingStrategyDecorator`,
-I immediately have an idea of what the two classes do and how they may relate. Second, and more importantly,
-a well organized codebase is necessarily easy to test. For starters you can probably remove the network calls
+I immediately have an idea of what the two classes do and how they may relate.
+Second, and more importantly, a well organized codebase is necessarily easy to test. For starters you can probably remove the network calls
 and most external dependencies from everywhere in your program except the outermost layer.
 Mocking everything everywhere is hardly testing and it might lead to a codebase where minute bugfixes require
 the updating of dozens of tests that were mocking false assumptions:

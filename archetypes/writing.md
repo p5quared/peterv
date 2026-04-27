@@ -1,9 +1,6 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-description: ""
 date: {{ .Date }}
-pinned: false
+description: ""
 tags: []
-repository: ""
-liveDemo: ""
 ---

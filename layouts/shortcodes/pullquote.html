@@ -1,0 +1,5 @@
+{{- $attr := .Get "attr" -}}
+<figure class="pullquote">
+  <blockquote>{{ .Inner | markdownify }}</blockquote>
+  {{ with $attr }}<figcaption>— {{ . }}</figcaption>{{ end }}
+</figure>

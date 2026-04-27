@@ -15,11 +15,15 @@
 <!-- Favicon -->
 <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
 
-<!-- Google Fonts -->
+<!-- Fonts: EB Garamond (serif body) + JetBrains Mono (metadata, code) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- Styles -->
 {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+{{ if .IsPage }}{{ if eq .Section "writing" }}
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "/writing/index.xml" | relURL }}">
+{{ end }}{{ end }}
