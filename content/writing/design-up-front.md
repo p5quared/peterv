@@ -1,7 +1,7 @@
 ---
 title: "Design Up Front"
 date: 2026-01-26
-description: "Agents appreciate code hygeine."
+description: "Give your agent a harness and put it in a fishing factory and you'll eat for life."
 tags: ["software", "ai"]
 ---
 
@@ -32,10 +32,10 @@ or _complex_ of a task can a model complete on its own. At some point of complex
 start downsizing the tasks you feed your model dramatically to accomodate this,
 or spend the bulk of your time steering the model to a sensible solution, or accept garbage.
 
-In an organized codebase you get two benefits. First, design patterns are meant to be a _lingua franca_,
+In an organized codebase you get two benefits. First is that  design patterns are a _lingua franca_,
 which means when I see two interfaces: `PricingStrategy` and `PricingStrategyDecorator`,
-I immediately have an idea of what the two classes do and how they may relate.
-Second, and more importantly, a well organized codebase is necessarily easy to test. For starters you can probably remove the network calls
+I immediately have some idea of what the implementations should do and how they may relate.
+Second and more importantly, a well organized codebase is necessarily easy to test. For starters you can probably remove the network calls
 and most external dependencies from everywhere in your program except the outermost layer.
 Mocking everything everywhere is hardly testing and it might lead to a codebase where minute bugfixes require
 the updating of dozens of tests that were mocking false assumptions:

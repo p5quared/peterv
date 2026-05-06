@@ -1,24 +1,21 @@
 {{ define "main" }}
-<div class="page-title">
-  <div class="page-title__kicker">dispatches</div>
-  <h1 class="page-title__h1">All <em>Writing</em></h1>
-  <div class="center-mark">{{ partial "marks/squiggle.html" (dict "width" 120) }}</div>
-</div>
+<header class="page-title">
+  <h1 class="page-title__h1"><em>Writing</em></h1>
+  <p class="page-title__deck">Essays and dispatches, in reverse chronological order.</p>
+</header>
 
 <div class="writing-list">
-{{ range .Pages.ByDate.Reverse }}
+{{ range .Pages.GroupByDate "2006" }}
+  <div class="year-sep">{{ .Key }}</div>
+  {{ range .Pages.ByDate.Reverse }}
   <article class="journal__entry">
-    <div class="journal__date">
-      <div class="day">{{ .Date.Format "02" }}</div>
-      <div class="month">{{ .Date.Format "Jan" }}</div>
-      <div class="year">{{ .Date.Format "2006" }}</div>
-    </div>
+    <div class="journal__date">{{ .Date.Format "Jan 02" }}</div>
     <div>
       <h3 class="journal__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       {{ with .Description }}<p class="journal__desc">{{ . }}</p>{{ end }}
-      {{ partial "tags.html" .Params.tags }}
     </div>
   </article>
+  {{ end }}
 {{ end }}
 </div>
 {{ end }}

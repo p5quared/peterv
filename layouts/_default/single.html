@@ -1,12 +1,11 @@
 {{ define "main" }}
-<div class="page-title">
-  <div class="page-title__kicker">a brief biography</div>
-  <h1 class="page-title__h1">The Editor of <em>this Almanac</em></h1>
-  <div class="center-mark">{{ partial "marks/squiggle.html" (dict "width" 140 "height" 10 "stroke" 1.6) }}</div>
-</div>
+<header class="page-title">
+  <h1 class="page-title__h1"><em>{{ .Title }}</em></h1>
+  {{ with .Description }}<p class="page-title__deck">{{ . }}</p>{{ end }}
+</header>
 
 <div class="about-spread">
-  <div>
+  <aside>
     {{ $portrait := .Params.portrait | default "/images/memtn.jpg" }}
     <figure class="fig about-portrait">
       <div class="fig__media"><img src="{{ $portrait }}" alt="portrait of the editor"></div>
@@ -18,33 +17,30 @@
       {{ end }}
     </figure>
 
-    <div class="drawn-box about-stats">
-      {{ partial "marks/drawn-box.html" . }}
-      <div style="position:relative;">
-        <div class="about-stats__title">vital statistics</div>
-        {{ if .Params.stats }}
-        <table>
-          <tbody>
-          {{ range .Params.stats }}
-            <tr><td class="k">{{ .key }}</td><td class="v">{{ .value }}</td></tr>
-          {{ end }}
-          </tbody>
-        </table>
-        {{ else }}
-        <div class="about-stats__empty">— to be filled in —</div>
+    <div class="about-stats">
+      <div class="about-stats__title">At a glance</div>
+      {{ if .Params.stats }}
+      <table>
+        <tbody>
+        {{ range .Params.stats }}
+          <tr><td class="k">{{ .key }}</td><td class="v">{{ .value }}</td></tr>
         {{ end }}
-      </div>
+        </tbody>
+      </table>
+      {{ else }}
+      <div class="about-stats__empty">— to be filled in —</div>
+      {{ end }}
     </div>
 
     <div class="about-contact">
-      <div class="about-contact__title">get in touch</div>
+      <div class="about-contact__title">Elsewhere</div>
       <ul>
-        <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
         <li><a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">{{ replace .Site.Params.github "https://" "" }}</a></li>
-        <li><a href="{{ "/resume.pdf" | relURL }}" target="_blank" rel="noopener">resume.pdf</a></li>
+        <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
+        <li><a href="{{ "/resume.pdf" | relURL }}" target="_blank" rel="noopener">resume.pdf ↗</a></li>
       </ul>
     </div>
-  </div>
+  </aside>
 
   <div class="about-bio">
     {{ .Content }}

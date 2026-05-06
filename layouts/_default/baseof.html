@@ -6,11 +6,9 @@
 <body>
   <div class="page">
     {{- partial "masthead.html" . -}}
-    {{- partial "nav.html" . -}}
     <main class="main {{ if .IsHome }}main--wide{{ end }}">
       {{- block "main" . }}{{- end }}
     </main>
-    {{- partial "colophon.html" . -}}
   </div>
 </body>
 </html>
